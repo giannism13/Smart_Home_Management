@@ -5,7 +5,9 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:local="clr-namespace:Smart_Home_management"
 		mc:Ignorable="d"
-		Title="MainWindow" Height="360" Width="500">
+		Title="MainWindow" Height="360" Width="500"
+        WindowStyle="None"
+        ResizeMode="NoResize">
     <Grid>
 
 
