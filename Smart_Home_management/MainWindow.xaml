@@ -7,7 +7,8 @@
 		mc:Ignorable="d"
 		Title="MainWindow" Height="450" Width="800"
 		WindowStyle="None"
-		ResizeMode="NoResize">
+		ResizeMode="NoResize"
+		Background="#181735">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="25"/>
@@ -19,9 +20,107 @@
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
 
-        <Grid Background="#0F0F2D"
+		<Grid Background="#0F0F2D"
 			  Grid.ColumnSpan="2">
-        </Grid>
 
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Text="Smart Home Management"
+					   Foreground="LightGray"
+					   Grid.Column="1"
+					   Grid.ColumnSpan="3"
+					   VerticalAlignment="Center"
+					   HorizontalAlignment="Center"
+					   FontFamily="Fonts/#Dosis"
+					   FontWeight="Medium"/>
 		</Grid>
+
+		<StackPanel Grid.Row="1">
+			<StackPanel>
+				<StackPanel Orientation="Horizontal"
+							Margin="0,0,0,20">
+					<Image Width="50" Height="50"
+					   Source="Images/icon.png"/>
+
+					<TextBlock Text="Smart Home Management"
+						   Foreground="White"
+						   FontSize="20"
+						   FontWeight="Medium"
+						   VerticalAlignment="Center"
+						   FontFamily="Fonts/#Dosis"/>
+				</StackPanel>
+				<TextBlock Text="Text1"
+						   Foreground="White"
+						   FontSize="25"
+						   FontWeight="Medium"
+						   VerticalAlignment="Center"
+						   FontFamily="Fonts/#Dosis"/>
+
+				<TextBlock Text="Text2"
+						   Foreground="White"
+						   FontSize="25"
+						   FontWeight="Medium"
+						   VerticalAlignment="Center"
+						   FontFamily="Fonts/#Dosis"/>
+
+				<TextBlock Text="Text3"
+						   Foreground="White"
+						   FontSize="25"
+						   FontWeight="Medium"
+						   VerticalAlignment="Center"
+						   FontFamily="Fonts/#Dosis"/>
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal"
+						Margin="0,15,0,0">
+				<Button Content="Login"
+						Foreground="White"
+						FontSize="14"
+						FontWeight="Medium">
+
+					<Button.Style>
+						<Style TargetType="Button">
+							<Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+							<Setter Property="Background" Value="#FE6584"/>
+							<Setter Property="Cursor" Value="Hand"/>
+
+							<Style.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Background" Value="#FF4C70"/>
+								</Trigger>
+							</Style.Triggers>
+						</Style>
+					</Button.Style>
+
+					<Button.Template>
+						<ControlTemplate TargetType="Button">
+							<Border Width="100" Height="25"
+									CornerRadius="12"
+									Background="{TemplateBinding Background}">
+								<ContentPresenter VerticalAlignment="Center"
+												  HorizontalAlignment="Center"/>
+
+							</Border>
+						</ControlTemplate>
+					</Button.Template>
+
+				</Button>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
 </Window>
