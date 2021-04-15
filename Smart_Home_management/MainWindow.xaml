@@ -5,7 +5,7 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:local="clr-namespace:Smart_Home_management"
 		mc:Ignorable="d"
-		Title="MainWindow" Height="450" Width="800"
+		Title="MainWindow" Height="500" Width="900"
 		WindowStyle="None"
 		ResizeMode="NoResize"
 		Background="#181735">
@@ -42,7 +42,7 @@
 
 			<TextBlock Text="Smart Home Management"
 					   Foreground="LightGray"
-					   Grid.Column="1"
+					   Grid.Column="0"
 					   Grid.ColumnSpan="3"
 					   VerticalAlignment="Center"
 					   HorizontalAlignment="Center"
@@ -50,19 +50,23 @@
 					   FontWeight="Medium"/>
 		</Grid>
 
-		<StackPanel Grid.Row="1">
+		<StackPanel Grid.Row="1"
+					VerticalAlignment="Center"
+					Margin="60">
 			<StackPanel>
 				<StackPanel Orientation="Horizontal"
 							Margin="0,0,0,20">
 					<Image Width="50" Height="50"
-					   Source="Images/icon.png"/>
+					   Source="Images/icon.png"
+						   RenderOptions.BitmapScalingMode="Fant"/>
 
 					<TextBlock Text="Smart Home Management"
 						   Foreground="White"
 						   FontSize="20"
 						   FontWeight="Medium"
 						   VerticalAlignment="Center"
-						   FontFamily="Fonts/#Dosis"/>
+						   FontFamily="Fonts/#Dosis"
+						   Margin="10,0,0,0"/>
 				</StackPanel>
 				<TextBlock Text="Text1"
 						   Foreground="White"
@@ -122,5 +126,61 @@
 				</Button>
 			</StackPanel>
 		</StackPanel>
+
+		<Grid Grid.Column="1"
+			  Grid.Row="2"
+			  Margin="16, -365, -610, 85"
+			  Panel.ZIndex="-1">
+			
+			<Grid.RenderTransform>
+				<RotateTransform Angle="50"/>
+			</Grid.RenderTransform>
+
+			<StackPanel Orientation="Horizontal"
+						Margin="-350, 250, -255, -250">
+				
+				<StackPanel>
+					<Border Width="700"
+							Height="35"
+							Background="#3DDDC2"
+							Margin="150, 0, 0, 0"
+							CornerRadius="20"/>
+					
+					<Border Width="700"
+							Height="35"
+							Background="#FC6586"
+							Margin="0, 15, 0, 0"
+							CornerRadius="20"/>
+					
+					<Border Width="700"
+							Height="35"
+							Background="#383660"
+							Margin="75, 15, 0, 0"
+							CornerRadius="20"/>
+				</StackPanel>
+
+				<StackPanel>
+					<Border Width="700"
+							Height="35"
+							Background="#3DDDC2"
+							Margin="150, 0, 0, 0"
+							CornerRadius="20"/>
+
+					<Border Width="700"
+							Height="35"
+							Background="#FC6586"
+							Margin="0, 15, 0, 0"
+							CornerRadius="20"/>
+
+					<Border Width="700"
+							Height="35"
+							Background="#383660"
+							Margin="75, 15, 0, 0"
+							CornerRadius="20"/>
+				</StackPanel>
+			</StackPanel>
+			
+		</Grid>
+		
 	</Grid>
 </Window>
