@@ -5,11 +5,19 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:local="clr-namespace:Smart_Home_management"
 		mc:Ignorable="d"
-		Title="MainWindow" Height="360" Width="500"
+		Title="MainWindow" Height="450" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
     </Grid>
 </Window>
