@@ -137,7 +137,7 @@
 			</Grid.RenderTransform>
 
 			<StackPanel Orientation="Horizontal"
-						Margin="-350, 250, -255, -250">
+						Margin="-350, 150, -255, -250">
 				
 				<StackPanel>
 					<Border Width="700"
