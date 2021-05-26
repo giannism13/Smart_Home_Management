@@ -22,7 +22,7 @@
 
 		<Grid Background="#0F0F2D"
 			  Grid.ColumnSpan="2"
-              MouseDown="Grid_MouseDown">
+			  MouseDown="Grid_MouseDown">
 
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition/>
@@ -69,12 +69,40 @@
 						   FontFamily="Fonts/#Dosis"
 						   Margin="10,0,0,0"/>
 				</StackPanel>
-				<TextBlock Text="Text1"
-						   Foreground="White"
-						   FontSize="25"
-						   FontWeight="Medium"
-						   VerticalAlignment="Center"
-						   FontFamily="Fonts/#Dosis"/>
+				
+				<TextBox
+					Background="White"
+					HorizontalAlignment="Center" 
+					VerticalAlignment="Center" 
+					FontFamily="Fonts/#Dosis"
+					FontSize="16" Cursor="IBeam"
+					IsReadOnly="False"
+					Margin="5">
+
+					<TextBox.Template>
+						<ControlTemplate TargetType="TextBox">
+							<Border Width="200" Height="25"
+									CornerRadius="10"
+									Background="{TemplateBinding Background}">
+								<ScrollViewer Margin="0"
+						x:Name="PART_ContentHost" />
+							</Border>
+						</ControlTemplate>
+					</TextBox.Template>
+				</TextBox>
+
+				<PasswordBox>
+					<PasswordBox.Template>
+						<ControlTemplate TargetType="PasswordBox">
+							<Border Width="200" Height="25"
+									CornerRadius="10"
+									Background="{TemplateBinding Background}">
+								<ScrollViewer Margin="0"
+                        x:Name="PART_ContentHost" />
+							</Border>
+						</ControlTemplate>
+					</PasswordBox.Template>
+				</PasswordBox>
 
 				<TextBlock Text="Text2"
 						   Foreground="White"
@@ -99,7 +127,7 @@
 						FontWeight="Medium">
 
 					<Button.Style>
-						<Style TargetType="Button">
+						<Style TargetType="{x:Type Button}">
 							<Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
 							<Setter Property="Background" Value="#FE6584"/>
 							<Setter Property="Cursor" Value="Hand"/>
@@ -113,7 +141,7 @@
 					</Button.Style>
 
 					<Button.Template>
-						<ControlTemplate TargetType="Button">
+						<ControlTemplate TargetType="{x:Type Button}">
 							<Border Width="100" Height="25"
 									CornerRadius="12"
 									Background="{TemplateBinding Background}">
