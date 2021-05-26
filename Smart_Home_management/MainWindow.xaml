@@ -71,12 +71,11 @@
 				</StackPanel>
 				
 				<TextBox
-					Background="White"
+					Name="usernameField"
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
 					FontFamily="Fonts/#Dosis"
 					FontSize="16" Cursor="IBeam"
-					IsReadOnly="False"
 					Margin="5">
 
 					<TextBox.Template>
@@ -90,15 +89,18 @@
 						</ControlTemplate>
 					</TextBox.Template>
 				</TextBox>
-
-				<PasswordBox>
+				
+				<PasswordBox
+					Name="passwordField"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center">
 					<PasswordBox.Template>
-						<ControlTemplate TargetType="PasswordBox">
+						<ControlTemplate TargetType="{x:Type PasswordBox}">
 							<Border Width="200" Height="25"
 									CornerRadius="10"
 									Background="{TemplateBinding Background}">
 								<ScrollViewer Margin="0"
-                        x:Name="PART_ContentHost" />
+						x:Name="PART_ContentHost" />
 							</Border>
 						</ControlTemplate>
 					</PasswordBox.Template>
