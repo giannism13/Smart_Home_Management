@@ -66,8 +66,9 @@
 		<StackPanel Grid.Row="1"
 					VerticalAlignment="Center"
 					Margin="60">
-			<StackPanel Height="194" Margin="0,0,0.4,0">
+			<StackPanel Height="221" Margin="0,0,0.4,0">
 				<StackPanel Orientation="Horizontal"
+							HorizontalAlignment="Center"
 							Margin="0,0,0,20">
 					<Image Width="50" Height="50"
 					   Source="Images/icon.png"
@@ -84,7 +85,7 @@
 
 				<TextBox
 					Name="usernameField"
-					Text="Username"
+					Text=" Username "
 					Foreground="#FFA08787"
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
@@ -108,15 +109,14 @@
 
 				<TextBox
 					Name="passwordField"
-					Text="Password"
+					Text=" Password "
 					Foreground="#FFA08787"
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
 					FontFamily="Fonts/#Dosis"
 					FontSize="16" Cursor="IBeam"
 					Margin="5"
-					GotFocus="passwordField_GotFocus"
-					LostFocus="passwordField_LostFocus">
+					GotFocus="passwordField_GotFocus" LostFocus="passwordField_LostFocus">
 
 					<TextBox.Template>
 						<ControlTemplate TargetType="TextBox">
@@ -130,39 +130,27 @@
 					</TextBox.Template>
 				</TextBox>
 
-				
-
-				<Button Content="Login"
-						Foreground="White"
-						FontSize="14"
-						FontWeight="Medium" RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0">
-
-					<Button.Style>
-						<Style TargetType="{x:Type Button}">
-							<Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
-							<Setter Property="Background" Value="#FE6584"/>
-							<Setter Property="Cursor" Value="Hand"/>
-
-							<Style.Triggers>
-								<Trigger Property="IsMouseOver" Value="True">
-									<Setter Property="Background" Value="#FF4C70"/>
-								</Trigger>
-							</Style.Triggers>
-						</Style>
-					</Button.Style>
+				<Button Name="loginbutton"
+						Content="Login" Cursor="Hand"
+						Foreground="White" Background="#FE6584"
+						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
+						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
+						Click="loginbutton_Click" MouseEnter="loginbutton_MouseEnter" MouseLeave="loginbutton_MouseLeave">
 
 					<Button.Template>
 						<ControlTemplate TargetType="{x:Type Button}">
 							<Border Width="100" Height="25"
 									CornerRadius="12"
 									Background="{TemplateBinding Background}">
-								<ContentPresenter VerticalAlignment="Center"
-												  HorizontalAlignment="Center"/>
-
+								<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
 							</Border>
 						</ControlTemplate>
 					</Button.Template>
 				</Button>
+
+				<TextBlock Name="errorText"
+						   FontFamily="Fonts/#Dosis" FontSize="14" Foreground="#FFFC0505"
+						   VerticalAlignment="center" HorizontalAlignment="Center"/>
 			</StackPanel>
 		</StackPanel>
 

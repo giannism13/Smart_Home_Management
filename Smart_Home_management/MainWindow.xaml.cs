@@ -28,7 +28,7 @@ namespace Smart_Home_management {
 		}
 
 		private void UsernameField_GotFocus(object sender, RoutedEventArgs e) {
-			if (usernameField.Text == "Username") {
+			if (usernameField.Text == " Username ") {
 				usernameField.Text = string.Empty;
 				usernameField.Foreground = new SolidColorBrush(Colors.Black);
 			}
@@ -36,13 +36,13 @@ namespace Smart_Home_management {
 
 		private void UsernameField_LostFocus(object sender, RoutedEventArgs e) {
 			if (usernameField.Text == string.Empty) {
-				usernameField.Text = "Username";
+				usernameField.Text = " Username ";
 				usernameField.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA08787"));
 			}
 		}
 
 		private void passwordField_GotFocus(object sender, RoutedEventArgs e) {
-			if (passwordField.Text == "Password") {
+			if (passwordField.Text == " Password ") {
 				passwordField.Text = string.Empty;
 				passwordField.Foreground = new SolidColorBrush(Colors.Black);
 			}
@@ -50,7 +50,7 @@ namespace Smart_Home_management {
 
 		private void passwordField_LostFocus(object sender, RoutedEventArgs e) {
 			if (passwordField.Text == string.Empty) {
-				passwordField.Text = "Password";
+				passwordField.Text = " Password ";
 				passwordField.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA08787"));
 			}
 		}
@@ -77,6 +77,23 @@ namespace Smart_Home_management {
 
 		private void minimizeButtonUnhover(object sender, MouseEventArgs e) {
 			minimizeButton.Fill = new SolidColorBrush(Colors.LightGreen);
+		}
+
+		private void loginbutton_MouseEnter(object sender, MouseEventArgs e) {
+			loginbutton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FF4C70"));
+		}
+
+		private void loginbutton_MouseLeave(object sender, MouseEventArgs e) {
+			loginbutton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FE6584"));
+		}
+
+		private void loginbutton_Click(object sender, RoutedEventArgs e) {
+			if (usernameField.Text == " Username " || passwordField.Text == " Password ")
+				errorText.Text = "Username and password fields cannot be empty!";
+			else if (usernameField.Text == "user" && passwordField.Text == "123")
+				errorText.Text = "login success!";
+			else
+				errorText.Text = "Wrong username or password!";
 		}
 	}
 }
