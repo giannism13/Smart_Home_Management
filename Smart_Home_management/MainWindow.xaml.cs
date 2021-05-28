@@ -54,5 +54,13 @@ namespace Smart_Home_management {
 				passwordField.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA08787"));
 			}
 		}
+
+		private void closeApp(object sender, MouseButtonEventArgs e) {
+			Close();
+		}
+
+		private void minimizeApp(object sender, MouseButtonEventArgs e) {
+			this.WindowState = WindowState.Minimized;
+		}
 	}
 }
