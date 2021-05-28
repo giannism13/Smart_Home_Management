@@ -60,7 +60,23 @@ namespace Smart_Home_management {
 		}
 
 		private void minimizeApp(object sender, MouseButtonEventArgs e) {
-			this.WindowState = WindowState.Minimized;
+			WindowState = WindowState.Minimized;
+		}
+
+		private void closeButtonHover(object sender, MouseEventArgs e) {
+			closeButton.Fill = new SolidColorBrush(Colors.DarkRed);
+		}
+
+		private void closeButtonUnhover(object sender, MouseEventArgs e) {
+			closeButton.Fill = new SolidColorBrush(Colors.Red);
+		}
+
+		private void minimizeButtonHover(object sender, MouseEventArgs e) {
+			minimizeButton.Fill = new SolidColorBrush(Colors.LimeGreen);
+		}
+
+		private void minimizeButtonUnhover(object sender, MouseEventArgs e) {
+			minimizeButton.Fill = new SolidColorBrush(Colors.LightGreen);
 		}
 	}
 }

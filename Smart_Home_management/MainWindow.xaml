@@ -50,13 +50,17 @@
 					   FontFamily="Fonts/#Dosis"
 					   FontWeight="Medium"/>
 
-			<Ellipse Fill="Red" Grid.Column="13"
+			<Ellipse Name="closeButton" 
+					 Fill="Red" Grid.Column="13"
 					 Height="14" Width="14" 
-					 HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,4.8" MouseDown="closeApp"/>
+					 HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,4.8"
+					 MouseDown="closeApp" MouseEnter="closeButtonHover" MouseLeave="closeButtonUnhover"/>
 
-			<Ellipse Fill="LightGreen" Grid.Column="13"
+			<Ellipse Name="minimizeButton"
+					 Fill="LightGreen" Grid.Column="13"
 					 Height="14" Width="14" 
-					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8" MouseDown="minimizeApp"/>
+					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8"
+					 MouseDown="minimizeApp" MouseEnter="minimizeButtonHover" MouseLeave="minimizeButtonUnhover"/>
 		</Grid>
 
 		<StackPanel Grid.Row="1"
