@@ -55,7 +55,7 @@
 		<StackPanel Grid.Row="1"
 					VerticalAlignment="Center"
 					Margin="60">
-			<StackPanel>
+			<StackPanel Height="194" Margin="0,0,0.4,0">
 				<StackPanel Orientation="Horizontal"
 							Margin="0,0,0,20">
 					<Image Width="50" Height="50"
@@ -119,46 +119,12 @@
 					</TextBox.Template>
 				</TextBox>
 
-				<!--<PasswordBox
-					Name="passwordField"
-					VerticalAlignment="Center"
-					HorizontalAlignment="Center"
-					PasswordChanged="PasswordChanged"
-					VerticalContentAlignment="Center">
+				
 
-					<PasswordBox.Template>
-						<ControlTemplate TargetType="{x:Type PasswordBox}">
-							<Border Width="200" Height="25"
-									CornerRadius="10"
-									Background="{TemplateBinding Background}">
-								<ScrollViewer Margin="0"
-						x:Name="PART_ContentHost" />
-							</Border>
-						</ControlTemplate>
-					</PasswordBox.Template>
-				</PasswordBox>-->
-
-				<TextBlock Text="Text2"
-						   Foreground="White"
-						   FontSize="25"
-						   FontWeight="Medium"
-						   VerticalAlignment="Center"
-						   FontFamily="Fonts/#Dosis"/>
-
-				<TextBlock Text="Text3"
-						   Foreground="White"
-						   FontSize="25"
-						   FontWeight="Medium"
-						   VerticalAlignment="Center"
-						   FontFamily="Fonts/#Dosis"/>
-			</StackPanel>
-
-			<StackPanel Orientation="Horizontal"
-						Margin="0,15,0,0">
 				<Button Content="Login"
 						Foreground="White"
 						FontSize="14"
-						FontWeight="Medium">
+						FontWeight="Medium" RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0">
 
 					<Button.Style>
 						<Style TargetType="{x:Type Button}">
@@ -185,7 +151,6 @@
 							</Border>
 						</ControlTemplate>
 					</Button.Template>
-
 				</Button>
 			</StackPanel>
 		</StackPanel>
