@@ -49,6 +49,14 @@
 					   HorizontalAlignment="Center"
 					   FontFamily="Fonts/#Dosis"
 					   FontWeight="Medium"/>
+
+			<Ellipse Fill="Red" Grid.Column="13"
+					 Height="14" Width="14" 
+					 HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,4.8" MouseDown="closeApp"/>
+
+			<Ellipse Fill="LightGreen" Grid.Column="13"
+					 Height="14" Width="14" 
+					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8" MouseDown="minimizeApp"/>
 		</Grid>
 
 		<StackPanel Grid.Row="1"
