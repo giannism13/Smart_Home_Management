@@ -9,6 +9,7 @@
 		WindowStyle="None"
 		ResizeMode="NoResize"
 		Background="#181735">
+	
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="25"/>
@@ -69,14 +70,18 @@
 						   FontFamily="Fonts/#Dosis"
 						   Margin="10,0,0,0"/>
 				</StackPanel>
-				
+
 				<TextBox
 					Name="usernameField"
+					Text="Username"
+					Foreground="#FFA08787"
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
 					FontFamily="Fonts/#Dosis"
 					FontSize="16" Cursor="IBeam"
-					Margin="5">
+					Margin="5"
+					GotFocus="UsernameField_GotFocus"
+					LostFocus="UsernameField_LostFocus">
 
 					<TextBox.Template>
 						<ControlTemplate TargetType="TextBox">
@@ -89,11 +94,38 @@
 						</ControlTemplate>
 					</TextBox.Template>
 				</TextBox>
-				
-				<PasswordBox
+
+				<TextBox
+					Name="passwordField"
+					Text="Password"
+					Foreground="#FFA08787"
+					HorizontalAlignment="Center" 
+					VerticalAlignment="Center" 
+					FontFamily="Fonts/#Dosis"
+					FontSize="16" Cursor="IBeam"
+					Margin="5"
+					GotFocus="passwordField_GotFocus"
+					LostFocus="passwordField_LostFocus">
+
+					<TextBox.Template>
+						<ControlTemplate TargetType="TextBox">
+							<Border Width="200" Height="25"
+									CornerRadius="10"
+									Background="{TemplateBinding Background}">
+								<ScrollViewer Margin="0"
+						x:Name="PART_ContentHost" />
+							</Border>
+						</ControlTemplate>
+					</TextBox.Template>
+				</TextBox>
+
+				<!--<PasswordBox
 					Name="passwordField"
 					VerticalAlignment="Center"
-					HorizontalAlignment="Center">
+					HorizontalAlignment="Center"
+					PasswordChanged="PasswordChanged"
+					VerticalContentAlignment="Center">
+
 					<PasswordBox.Template>
 						<ControlTemplate TargetType="{x:Type PasswordBox}">
 							<Border Width="200" Height="25"
@@ -104,7 +136,7 @@
 							</Border>
 						</ControlTemplate>
 					</PasswordBox.Template>
-				</PasswordBox>
+				</PasswordBox>-->
 
 				<TextBlock Text="Text2"
 						   Foreground="White"
@@ -162,27 +194,27 @@
 			  Grid.Row="2"
 			  Margin="16, -365, -610, 85"
 			  Panel.ZIndex="-1">
-			
+
 			<Grid.RenderTransform>
 				<RotateTransform Angle="50"/>
 			</Grid.RenderTransform>
 
 			<StackPanel Orientation="Horizontal"
 						Margin="-350, 150, -255, -250">
-				
+
 				<StackPanel>
 					<Border Width="700"
 							Height="35"
 							Background="#3DDDC2"
 							Margin="150, 0, 0, 0"
 							CornerRadius="20"/>
-					
+
 					<Border Width="700"
 							Height="35"
 							Background="#FC6586"
 							Margin="0, 15, 0, 0"
 							CornerRadius="20"/>
-					
+
 					<Border Width="700"
 							Height="35"
 							Background="#383660"
@@ -210,8 +242,8 @@
 							CornerRadius="20"/>
 				</StackPanel>
 			</StackPanel>
-			
+
 		</Grid>
-		
+
 	</Grid>
 </Window>

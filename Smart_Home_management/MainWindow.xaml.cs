@@ -26,5 +26,33 @@ namespace Smart_Home_management {
 			if (e.LeftButton == MouseButtonState.Pressed)
 				DragMove();
 		}
+
+		private void UsernameField_GotFocus(object sender, RoutedEventArgs e) {
+			if (usernameField.Text == "Username") {
+				usernameField.Text = string.Empty;
+				usernameField.Foreground = new SolidColorBrush(Colors.Black);
+			}
+		}
+
+		private void UsernameField_LostFocus(object sender, RoutedEventArgs e) {
+			if (usernameField.Text == string.Empty) {
+				usernameField.Text = "Username";
+				usernameField.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA08787"));
+			}
+		}
+
+		private void passwordField_GotFocus(object sender, RoutedEventArgs e) {
+			if (passwordField.Text == "Password") {
+				passwordField.Text = string.Empty;
+				passwordField.Foreground = new SolidColorBrush(Colors.Black);
+			}
+		}
+
+		private void passwordField_LostFocus(object sender, RoutedEventArgs e) {
+			if (passwordField.Text == string.Empty) {
+				passwordField.Text = "Password";
+				passwordField.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA08787"));
+			}
+		}
 	}
 }
