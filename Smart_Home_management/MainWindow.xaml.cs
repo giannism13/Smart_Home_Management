@@ -20,6 +20,7 @@ namespace Smart_Home_management {
 	public partial class MainWindow : Window {
 		public MainWindow() {
 			InitializeComponent();
+			Main.Content = new loginPage();
 		}
 
 		private void Grid_MouseDown(object sender, MouseButtonEventArgs e) {
@@ -27,73 +28,28 @@ namespace Smart_Home_management {
 				DragMove();
 		}
 
-		private void UsernameField_GotFocus(object sender, RoutedEventArgs e) {
-			if (usernameField.Text == " Username ") {
-				usernameField.Text = string.Empty;
-				usernameField.Foreground = new SolidColorBrush(Colors.Black);
-			}
-		}
-
-		private void UsernameField_LostFocus(object sender, RoutedEventArgs e) {
-			if (usernameField.Text == string.Empty) {
-				usernameField.Text = " Username ";
-				usernameField.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA08787"));
-			}
-		}
-
-		private void passwordField_GotFocus(object sender, RoutedEventArgs e) {
-			if (passwordField.Text == " Password ") {
-				passwordField.Text = string.Empty;
-				passwordField.Foreground = new SolidColorBrush(Colors.Black);
-			}
-		}
-
-		private void passwordField_LostFocus(object sender, RoutedEventArgs e) {
-			if (passwordField.Text == string.Empty) {
-				passwordField.Text = " Password ";
-				passwordField.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFA08787"));
-			}
-		}
-
-		private void closeApp(object sender, MouseButtonEventArgs e) {
+		private void CloseApp(object sender, MouseButtonEventArgs e) {
 			Close();
 		}
 
-		private void minimizeApp(object sender, MouseButtonEventArgs e) {
+		private void MinimizeApp(object sender, MouseButtonEventArgs e) {
 			WindowState = WindowState.Minimized;
 		}
 
-		private void closeButtonHover(object sender, MouseEventArgs e) {
+		private void CloseButtonHover(object sender, MouseEventArgs e) {
 			closeButton.Fill = new SolidColorBrush(Colors.DarkRed);
 		}
 
-		private void closeButtonUnhover(object sender, MouseEventArgs e) {
-			closeButton.Fill = new SolidColorBrush(Colors.Red);
+		private void CloseButtonUnhover(object sender, MouseEventArgs e) {
+			closeButton.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FC6586"));
 		}
 
-		private void minimizeButtonHover(object sender, MouseEventArgs e) {
+		private void MinimizeButtonHover(object sender, MouseEventArgs e) {
 			minimizeButton.Fill = new SolidColorBrush(Colors.LimeGreen);
 		}
 
-		private void minimizeButtonUnhover(object sender, MouseEventArgs e) {
-			minimizeButton.Fill = new SolidColorBrush(Colors.LightGreen);
-		}
-
-		private void loginbutton_MouseEnter(object sender, MouseEventArgs e) {
-			loginbutton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FF4C70"));
-		}
-
-		private void loginbutton_MouseLeave(object sender, MouseEventArgs e) {
-			loginbutton.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FE6584"));
-		}
-
-		private void loginbutton_Click(object sender, RoutedEventArgs e) {
-			if (usernameField.Text == " Username " || passwordField.Text == " Password ")
-				errorText.Text = "Username and password fields cannot be empty!";
-			else if (usernameField.Text == "user" && passwordField.Text == "123")
-				errorText.Text = "login success!";
-			else
-				errorText.Text = "Wrong username or password!";
+		private void MinimizeButtonUnhover(object sender, MouseEventArgs e) {
+			minimizeButton.Fill = (SolidColorBrush)(new BrushConverter().ConvertFrom("#3DDDC2"));
 		}
 	}
 }

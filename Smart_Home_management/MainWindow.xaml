@@ -8,19 +8,10 @@
 		WindowStyle="None"
 		ResizeMode="NoResize"
 		Background="#181735">
-	
+
 	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="25"/>
-			<RowDefinition/>
-		</Grid.RowDefinitions>
-
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition/>
-			<ColumnDefinition/>
-		</Grid.ColumnDefinitions>
-
 		<Grid Background="#0F0F2D"
+			  Height="25" VerticalAlignment="Top"
 			  Grid.ColumnSpan="2"
 			  MouseDown="Grid_MouseDown">
 
@@ -51,161 +42,19 @@
 					   FontWeight="Medium"/>
 
 			<Ellipse Name="closeButton" 
-					 Fill="Red" Grid.Column="13"
+					 Fill="#FC6586" Grid.Column="13"
 					 Height="14" Width="14" 
 					 HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,4.8"
-					 MouseDown="closeApp" MouseEnter="closeButtonHover" MouseLeave="closeButtonUnhover"/>
+					 MouseDown="CloseApp" MouseEnter="CloseButtonHover" MouseLeave="CloseButtonUnhover"/>
 
 			<Ellipse Name="minimizeButton"
-					 Fill="LightGreen" Grid.Column="13"
+					 Fill="#3DDDC2" Grid.Column="13"
 					 Height="14" Width="14" 
 					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8"
-					 MouseDown="minimizeApp" MouseEnter="minimizeButtonHover" MouseLeave="minimizeButtonUnhover"/>
+					 MouseDown="MinimizeApp" MouseEnter="MinimizeButtonHover" MouseLeave="MinimizeButtonUnhover"/>
 		</Grid>
+		<Frame x:Name="Main" Margin="0,25,0,0">
 
-		<StackPanel Grid.Row="1"
-					VerticalAlignment="Center"
-					Margin="60">
-			<StackPanel Height="221" Margin="0,0,0.4,0">
-				<StackPanel Orientation="Horizontal"
-							HorizontalAlignment="Center"
-							Margin="0,0,0,20">
-					<Image Width="50" Height="50"
-					   Source="Images/icon.png"
-						   RenderOptions.BitmapScalingMode="Fant"/>
-
-					<TextBlock Text="Smart Home Management"
-						   Foreground="White"
-						   FontSize="20"
-						   FontWeight="Medium"
-						   VerticalAlignment="Center"
-						   FontFamily="Fonts/#Dosis"
-						   Margin="10,0,0,0"/>
-				</StackPanel>
-
-				<TextBox
-					Name="usernameField"
-					Text=" Username "
-					Foreground="#FFA08787"
-					HorizontalAlignment="Center" 
-					VerticalAlignment="Center" 
-					FontFamily="Fonts/#Dosis"
-					FontSize="16" Cursor="IBeam"
-					Margin="5"
-					GotFocus="UsernameField_GotFocus"
-					LostFocus="UsernameField_LostFocus">
-
-					<TextBox.Template>
-						<ControlTemplate TargetType="TextBox">
-							<Border Width="200" Height="25"
-									CornerRadius="10"
-									Background="{TemplateBinding Background}">
-								<ScrollViewer Margin="0"
-						x:Name="PART_ContentHost" />
-							</Border>
-						</ControlTemplate>
-					</TextBox.Template>
-				</TextBox>
-
-				<TextBox
-					Name="passwordField"
-					Text=" Password "
-					Foreground="#FFA08787"
-					HorizontalAlignment="Center" 
-					VerticalAlignment="Center" 
-					FontFamily="Fonts/#Dosis"
-					FontSize="16" Cursor="IBeam"
-					Margin="5"
-					GotFocus="passwordField_GotFocus" LostFocus="passwordField_LostFocus">
-
-					<TextBox.Template>
-						<ControlTemplate TargetType="TextBox">
-							<Border Width="200" Height="25"
-									CornerRadius="10"
-									Background="{TemplateBinding Background}">
-								<ScrollViewer Margin="0"
-						x:Name="PART_ContentHost" />
-							</Border>
-						</ControlTemplate>
-					</TextBox.Template>
-				</TextBox>
-
-				<Button Name="loginbutton"
-						Content="Login" Cursor="Hand"
-						Foreground="White" Background="#FE6584"
-						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
-						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
-						Click="loginbutton_Click" MouseEnter="loginbutton_MouseEnter" MouseLeave="loginbutton_MouseLeave">
-
-					<Button.Template>
-						<ControlTemplate TargetType="{x:Type Button}">
-							<Border Width="100" Height="25"
-									CornerRadius="12"
-									Background="{TemplateBinding Background}">
-								<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
-							</Border>
-						</ControlTemplate>
-					</Button.Template>
-				</Button>
-
-				<TextBlock Name="errorText"
-						   FontFamily="Fonts/#Dosis" FontSize="14" Foreground="#FFFC0505"
-						   VerticalAlignment="center" HorizontalAlignment="Center"/>
-			</StackPanel>
-		</StackPanel>
-
-		<Grid Grid.Column="1"
-			  Grid.Row="2"
-			  Margin="16, -365, -610, 85"
-			  Panel.ZIndex="-1">
-
-			<Grid.RenderTransform>
-				<RotateTransform Angle="50"/>
-			</Grid.RenderTransform>
-
-			<StackPanel Orientation="Horizontal"
-						Margin="-350, 150, -255, -250">
-
-				<StackPanel>
-					<Border Width="700"
-							Height="35"
-							Background="#3DDDC2"
-							Margin="150, 0, 0, 0"
-							CornerRadius="20"/>
-
-					<Border Width="700"
-							Height="35"
-							Background="#FC6586"
-							Margin="0, 15, 0, 0"
-							CornerRadius="20"/>
-
-					<Border Width="700"
-							Height="35"
-							Background="#383660"
-							Margin="75, 15, 0, 0"
-							CornerRadius="20"/>
-				</StackPanel>
-
-				<StackPanel>
-					<Border Width="700"
-							Height="35"
-							Background="#3DDDC2"
-							Margin="150, 0, 0, 0"
-							CornerRadius="20"/>
-
-					<Border Width="700"
-							Height="35"
-							Background="#FC6586"
-							Margin="0, 15, 0, 0"
-							CornerRadius="20"/>
-
-					<Border Width="700"
-							Height="35"
-							Background="#383660"
-							Margin="75, 15, 0, 0"
-							CornerRadius="20"/>
-				</StackPanel>
-			</StackPanel>
-		</Grid>
+		</Frame>
 	</Grid>
 </Window>
