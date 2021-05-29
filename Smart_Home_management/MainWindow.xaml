@@ -3,11 +3,58 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:local="clr-namespace:Smart_Home_management"
 		mc:Ignorable="d"
-		Title="MainWindow" Height="360" Width="500">
-    <Grid>
+		Title="MainWindow" Height="500" Width="900"
+		WindowStyle="None"
+		ResizeMode="NoResize"
+		Background="#181735">
 
+	<Grid>
+		<Grid Background="#0F0F2D"
+			  Height="25" VerticalAlignment="Top"
+			  Grid.ColumnSpan="2"
+			  MouseDown="Grid_MouseDown">
 
-    </Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Text="Smart Home Management"
+					   Foreground="LightGray"
+					   Grid.Column="0"
+					   Grid.ColumnSpan="3"
+					   VerticalAlignment="Center"
+					   HorizontalAlignment="Center"
+					   FontFamily="Fonts/#Dosis"
+					   FontWeight="Medium"/>
+
+			<Ellipse Name="closeButton" 
+					 Fill="#FC6586" Grid.Column="13"
+					 Height="14" Width="14" 
+					 HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,4.8"
+					 MouseDown="CloseApp" MouseEnter="CloseButtonHover" MouseLeave="CloseButtonUnhover"/>
+
+			<Ellipse Name="minimizeButton"
+					 Fill="#3DDDC2" Grid.Column="13"
+					 Height="14" Width="14" 
+					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8"
+					 MouseDown="MinimizeApp" MouseEnter="MinimizeButtonHover" MouseLeave="MinimizeButtonUnhover"/>
+		</Grid>
+		<Frame x:Name="Main" Margin="0,25,0,0">
+
+		</Frame>
+	</Grid>
 </Window>
