@@ -33,6 +33,8 @@
 				<ColumnDefinition/>
 			</Grid.ColumnDefinitions>
 
+			<Image Grid.Column="0" Source="Images/icon.png" HorizontalAlignment="Left" Margin="5,3"/>
+
 			<TextBlock Text="Smart Home Management"
 					   Foreground="LightGray"
 					   Grid.Column="0"
