@@ -13,7 +13,8 @@
 		<Grid Background="#0F0F2D"
 			  Height="25" VerticalAlignment="Top"
 			  Grid.ColumnSpan="2"
-			  MouseDown="Grid_MouseDown">
+			  MouseDown="Grid_MouseDown"
+			  Panel.ZIndex="2">
 
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition/>
