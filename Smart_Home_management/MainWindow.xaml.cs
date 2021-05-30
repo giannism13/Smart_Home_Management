@@ -9,7 +9,7 @@ namespace Smart_Home_management {
 	public partial class MainWindow : Window {
 		public MainWindow() {
 			InitializeComponent();
-			Main.Content = new loginPage();
+			Main.Content = new LoginPage();
 		}
 
 		private void Grid_MouseDown(object sender, MouseButtonEventArgs e) {

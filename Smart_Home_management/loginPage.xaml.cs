@@ -7,8 +7,8 @@ namespace Smart_Home_management {
 	/// <summary>
 	/// Interaction logic for loginPage.xaml
 	/// </summary>
-	public partial class loginPage : Page {
-		public loginPage() {
+	public partial class LoginPage : Page {
+		public LoginPage() {
 			InitializeComponent();
 		}
 
