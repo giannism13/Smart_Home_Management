@@ -7,7 +7,8 @@
 		Title="MainWindow" Height="500" Width="900"
 		WindowStyle="None"
 		ResizeMode="NoResize"
-		Background="#181735">
+		Background="#181735"
+		Icon="/Images/icon.ico">
 
 	<Grid>
 		<Grid Background="#0F0F2D"
