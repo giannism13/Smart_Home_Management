@@ -54,7 +54,7 @@
 					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8"
 					 MouseDown="MinimizeApp" MouseEnter="MinimizeButtonHover" MouseLeave="MinimizeButtonUnhover"/>
 		</Grid>
-		<Frame x:Name="Main" Margin="0,25,0,0">
+		<Frame x:Name="Main" Margin="0,25,0,0" NavigationUIVisibility="Hidden">
 
 		</Frame>
 	</Grid>
