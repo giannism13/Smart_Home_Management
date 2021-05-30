@@ -17,8 +17,8 @@ namespace Smart_Home_management {
 	/// <summary>
 	/// Interaction logic for homePage.xaml
 	/// </summary>
-	public partial class homePage : Page {
-		public homePage() {
+	public partial class HomePage : Page {
+		public HomePage() {
 			InitializeComponent();
 		}
 
