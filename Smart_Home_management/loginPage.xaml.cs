@@ -1,24 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Smart_Home_management {
 	/// <summary>
 	/// Interaction logic for loginPage.xaml
 	/// </summary>
-	public partial class loginPage : Page {
-		public loginPage() {
+	public partial class LoginPage : Page {
+		public LoginPage() {
 			InitializeComponent();
 		}
 
@@ -61,8 +51,10 @@ namespace Smart_Home_management {
 		private void LoginButton_Click(object sender, RoutedEventArgs e) {
 			if (usernameField.Text == " Username " || passwordField.Text == " Password ")
 				errorText.Text = "Username and password fields cannot be empty!";
-			else if (usernameField.Text == "user" && passwordField.Text == "123")
-				errorText.Text = "login success!";
+			else if (usernameField.Text == "user" && passwordField.Text == "123") {
+				MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
+				objMainWindows.Main.Navigate(new HomePage());
+			}
 			else
 				errorText.Text = "Wrong username or password!";
 		}

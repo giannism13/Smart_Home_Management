@@ -7,13 +7,15 @@
 		Title="MainWindow" Height="500" Width="900"
 		WindowStyle="None"
 		ResizeMode="NoResize"
-		Background="#181735">
+		Background="#181735"
+		Icon="/Images/icon.ico">
 
 	<Grid>
 		<Grid Background="#0F0F2D"
 			  Height="25" VerticalAlignment="Top"
 			  Grid.ColumnSpan="2"
-			  MouseDown="Grid_MouseDown">
+			  MouseDown="Grid_MouseDown"
+			  Panel.ZIndex="2">
 
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition/>
@@ -31,6 +33,8 @@
 				<ColumnDefinition/>
 				<ColumnDefinition/>
 			</Grid.ColumnDefinitions>
+
+			<Image Grid.Column="0" Source="Images/icon.png" HorizontalAlignment="Left" Margin="5,3"/>
 
 			<TextBlock Text="Smart Home Management"
 					   Foreground="LightGray"
@@ -53,7 +57,7 @@
 					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8"
 					 MouseDown="MinimizeApp" MouseEnter="MinimizeButtonHover" MouseLeave="MinimizeButtonUnhover"/>
 		</Grid>
-		<Frame x:Name="Main" Margin="0,25,0,0">
+		<Frame x:Name="Main" Margin="0,25,0,0" NavigationUIVisibility="Hidden">
 
 		</Frame>
 	</Grid>
