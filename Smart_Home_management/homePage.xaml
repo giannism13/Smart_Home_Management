@@ -5,7 +5,8 @@
 	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 	  mc:Ignorable="d" 
 	  d:DesignHeight="475" d:DesignWidth="900"
-	  Title="HomePage">
+	  Title="HomePage"
+	  FontFamily="Fonts/#Dosis">
 
 	<Grid VerticalAlignment="Center" Height="475">
 		<Grid.ColumnDefinitions>
@@ -19,7 +20,7 @@
 			<Button Name="kitchen"
 						Content="Kitchen" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
-						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
+						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,100,0.4,0" 
 						MouseEnter="KitchenButton_MouseEnter" MouseLeave="KitchenButton_MouseLeave">
 
@@ -37,7 +38,7 @@
 			<Button Name="livingRoom"
 						Content="Living Room" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
-						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
+						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
 						MouseEnter="LivingRoomButton_MouseEnter" MouseLeave="LivingRoomButton_MouseLeave">
 
@@ -55,7 +56,7 @@
 			<Button Name="bedroom1"
 						Content="Bedroom 1" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
-						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
+						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
 						MouseEnter="Bedroom1Button_MouseEnter" MouseLeave="Bedroom1Button_MouseLeave">
 
@@ -73,7 +74,7 @@
 			<Button Name="bedroom2"
 						Content="Bedroom 2" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
-						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
+						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
 						MouseEnter="Bedroom2Button_MouseEnter" MouseLeave="Bedroom2Button_MouseLeave">
 
@@ -91,7 +92,7 @@
 			<Button Name="bathroom"
 						Content="Bathroom" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
-						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
+						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
 						MouseEnter="BathroomButton_MouseEnter" MouseLeave="BathroomButton_MouseLeave">
 

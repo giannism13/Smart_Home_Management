@@ -6,7 +6,8 @@
 	  xmlns:local="clr-namespace:Smart_Home_management"
 	  mc:Ignorable="d" 
 	  d:DesignHeight="450" d:DesignWidth="800"
-	  Title="loginPage">
+	  Title="loginPage"
+	  FontFamily="Fonts/#Dosis">
 
 	<Grid>
 		<Grid.RowDefinitions>
@@ -35,7 +36,6 @@
 						   FontSize="20"
 						   FontWeight="Medium"
 						   VerticalAlignment="Center"
-						   FontFamily="Fonts/#Dosis"
 						   Margin="10,0,0,0"/>
 				</StackPanel>
 
@@ -45,7 +45,6 @@
 					Foreground="#FFA08787"
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
-					FontFamily="Fonts/#Dosis"
 					FontSize="16" Cursor="IBeam"
 					Margin="5"
 					GotFocus="UsernameField_GotFocus"
@@ -69,7 +68,6 @@
 					Foreground="#FFA08787"
 					HorizontalAlignment="Center" 
 					VerticalAlignment="Center" 
-					FontFamily="Fonts/#Dosis"
 					FontSize="16" Cursor="IBeam"
 					Margin="5"
 					GotFocus="PasswordField_GotFocus" LostFocus="PasswordField_LostFocus">
@@ -89,7 +87,7 @@
 				<Button Name="loginbutton"
 						Content="Login" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
-						FontFamily="Fonts/#Dosis" FontSize="14" FontWeight="Medium"
+						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
 						Click="LoginButton_Click" MouseEnter="LoginButton_MouseEnter" MouseLeave="LoginButton_MouseLeave">
 
@@ -105,7 +103,7 @@
 				</Button>
 
 				<TextBlock Name="errorText"
-						   FontFamily="Fonts/#Dosis" FontSize="14" Foreground="#FFFC0505"
+						   FontSize="14" Foreground="#FFFC0505"
 						   VerticalAlignment="center" HorizontalAlignment="Center"/>
 			</StackPanel>
 		</StackPanel>
