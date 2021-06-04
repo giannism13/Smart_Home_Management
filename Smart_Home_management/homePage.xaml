@@ -94,7 +94,7 @@
 						Foreground="White" Background="#FE6584"
 						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
-						MouseEnter="BathroomButton_MouseEnter" MouseLeave="BathroomButton_MouseLeave">
+						MouseEnter="BathroomButton_MouseEnter" MouseLeave="BathroomButton_MouseLeave" Click="GotoBathroom">
 
 				<Button.Template>
 					<ControlTemplate TargetType="{x:Type Button}">

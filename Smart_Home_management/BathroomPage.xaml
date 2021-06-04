@@ -17,8 +17,47 @@
 		</Grid.ColumnDefinitions>
 
 		<Grid.RowDefinitions>
-			<RowDefinition Height="80"/>
+			<RowDefinition Height="40"/>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0" Grid.ColumnSpan="2" Background="#0F0F2D"  Orientation="Horizontal">
+			<Button Background="{x:Null}" BorderBrush="{x:Null}" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BackButtonAction">
+				<materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="25"  Foreground="White" Cursor="Hand"/>
+			</Button>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" 
+					   Text="Bathroom" Foreground="White" FontSize="20" FontWeight="Bold" Margin="350,6,0,4" Height="30"/>
+		</StackPanel>
+
+		<Image Source="Images/Bathroom.jpg" Grid.Column="1" Grid.Row="1"
+			   VerticalAlignment="Top" HorizontalAlignment="Center"
+			   Height="320" RenderOptions.BitmapScalingMode="Linear"/>
+
+		<StackPanel Grid.Column="0" Grid.Row="1" Background="#FF292759" Panel.ZIndex="-1">
+			<Grid Height="395">
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+
+				<ToggleButton Grid.Row="0" Checked="LightOn" Unchecked="LightOff" Margin="16.8,92,16.4,79.6" Grid.Column="1"/>
+				<materialDesign:PackIcon Name="Light" Kind="CeilingLamp" Height="60" Width="60"
+										 VerticalAlignment="Center" HorizontalAlignment="Center"/>
+				<TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Light" Foreground="White" VerticalAlignment="Bottom" 
+						   HorizontalAlignment="Center" FontSize="15" Margin="0,0,0,40"/>
+
+				<ToggleButton Grid.Row="1" Grid.Column="1" Checked="WmOn" Unchecked="WmOff" Margin="16.8,92,16.4,79.6"/>
+				<materialDesign:PackIcon Name="WashingM" Kind="WashingMachine" Height="60" Width="60" Grid.Row="1"
+										 VerticalAlignment="Center" HorizontalAlignment="Center"/>
+				<TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Washing Machine" Foreground="White" VerticalAlignment="Bottom" 
+						   HorizontalAlignment="Center" FontSize="15" Margin="0,0,0,40"/>
+			</Grid>
+		</StackPanel>
+		<Rectangle Margin="380,19,297.4,350.2" Grid.Column="1" Grid.Row="1"/>
 	</Grid>
 </Page>

@@ -18,8 +18,31 @@ namespace Smart_Home_management {
 	/// Interaction logic for BathroomPage.xaml
 	/// </summary>
 	public partial class BathroomPage : Page {
-		public BathroomPage() {
+		private readonly HomePage home;
+
+		public BathroomPage(HomePage _home) {
 			InitializeComponent();
+			home = _home;
+		}
+
+		private void BackButtonAction(object sender, RoutedEventArgs e) {
+			NavigationService.Navigate(home);
+		}
+
+		private void LightOn(object sender, RoutedEventArgs e) {
+			Light.Foreground = new SolidColorBrush(Colors.LightGreen);
+		}
+
+		private void LightOff(object sender, RoutedEventArgs e) {
+			Light.Foreground = new SolidColorBrush(Colors.Black);
+		}
+
+		private void WmOn(object sender, RoutedEventArgs e) {
+			WashingM.Foreground = new SolidColorBrush(Colors.LightGreen);
+		}
+
+		private void WmOff(object sender, RoutedEventArgs e) {
+			WashingM.Foreground = new SolidColorBrush(Colors.Black);
 		}
 	}
 }

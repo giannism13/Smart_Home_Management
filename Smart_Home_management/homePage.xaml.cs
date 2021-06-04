@@ -8,8 +8,11 @@ namespace Smart_Home_management {
 	/// Interaction logic for homePage.xaml
 	/// </summary>
 	public partial class HomePage : Page {
+		private readonly BathroomPage brpage;
+
 		public HomePage() {
 			InitializeComponent();
+			brpage = new BathroomPage(this);
 		}
 
 		private void KitchenButton_MouseEnter(object sender, MouseEventArgs e) {
@@ -64,6 +67,10 @@ namespace Smart_Home_management {
 		private void BathroomButton_MouseLeave(object sender, MouseEventArgs e) {
 			bathroom.Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#FE6584");
 			BathroomBorder.Visibility = Visibility.Hidden;
+		}
+
+		private void GotoBathroom(object sender, RoutedEventArgs e) {
+			NavigationService.Navigate(brpage);
 		}
 	}
 }

@@ -54,7 +54,7 @@
 						<ControlTemplate TargetType="TextBox">
 							<Border Width="200" Height="25"
 									CornerRadius="10"
-									Background="{TemplateBinding Background}">
+									Background="White">
 								<ScrollViewer Margin="0"
 						x:Name="PART_ContentHost" />
 							</Border>
@@ -76,7 +76,7 @@
 						<ControlTemplate TargetType="TextBox">
 							<Border Width="200" Height="25"
 									CornerRadius="10"
-									Background="{TemplateBinding Background}">
+									Background="White">
 								<ScrollViewer Margin="0"
 						x:Name="PART_ContentHost" />
 							</Border>
