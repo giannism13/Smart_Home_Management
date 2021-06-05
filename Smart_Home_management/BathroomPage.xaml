@@ -1,0 +1,72 @@
+﻿<Page x:Class="Smart_Home_management.BathroomPage"
+	  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  xmlns:local="clr-namespace:Smart_Home_management"
+	  mc:Ignorable="d" 
+	  d:DesignHeight="475" d:DesignWidth="900"
+	  Title="BathroomPage"
+	  FontFamily="Fonts/#Dosis">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="150"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Grid.Row="0" Grid.ColumnSpan="2" Background="#0F0F2D"  Orientation="Horizontal">
+			<Button Background="{x:Null}" BorderBrush="{x:Null}" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BackButtonAction">
+				<materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="25"  Foreground="White" Cursor="Hand"/>
+			</Button>
+			<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" 
+					   Text="Bathroom" Foreground="White" FontSize="20" FontWeight="Bold" Margin="350,6,0,4" Height="30"/>
+		</StackPanel>
+
+		<Image Source="Images/Bathroom.jpg" Grid.Column="1" Grid.Row="1"
+			   VerticalAlignment="Top" HorizontalAlignment="Center"
+			   Height="320" RenderOptions.BitmapScalingMode="Linear"/>
+
+		<StackPanel Grid.Column="0" Grid.Row="1" Background="#FF292759" Panel.ZIndex="-1">
+			<Grid Height="395">
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+
+				<ToggleButton Grid.Row="0" Checked="LightOn" Unchecked="LightOff" Margin="16.8,92,16.4,79.6" Grid.Column="1"/>
+				<materialDesign:PackIcon Name="Light" Kind="CeilingLamp" Height="60" Width="60"
+										 VerticalAlignment="Center" HorizontalAlignment="Center"/>
+				<TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Light" Foreground="White" VerticalAlignment="Bottom" 
+						   HorizontalAlignment="Center" FontSize="15" Margin="0,0,0,40"/>
+
+				<ToggleButton Grid.Row="1" Grid.Column="1" Checked="WmOn" Unchecked="WmOff" Margin="16.8,92,16.4,79.6"/>
+				<materialDesign:PackIcon Name="WashingM" Kind="WashingMachine" Height="60" Width="60" Grid.Row="1"
+										 VerticalAlignment="Center" HorizontalAlignment="Center"/>
+				<TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Washing Machine" Foreground="White" VerticalAlignment="Bottom" 
+						   HorizontalAlignment="Center" FontSize="15" Margin="0,0,0,40"/>
+			</Grid>
+		</StackPanel>
+		<Rectangle Name="WmRect" Margin="380,19,297.4,350.2" Grid.Column="1" Grid.Row="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
+
+		<Rectangle Name="LightRect" Margin="275,19,275.4,137.2" Grid.Row="1" Grid.Column="1" Opacity="0.865" Visibility="Hidden">
+			<Rectangle.Fill>
+				<RadialGradientBrush Opacity="0.595">
+					<GradientStop Color="LightYellow" Offset="0"/>
+					<GradientStop Color="#43EEFF2A" Offset="0.582"/>
+				</RadialGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+	</Grid>
+</Page>
