@@ -24,7 +24,7 @@
 				<ColumnDefinition Width="61"/>
 			</Grid.ColumnDefinitions>
 
-			<Image Grid.Column="0" Source="Images/icon.png" HorizontalAlignment="Left" Margin="5,3"/>
+			<Image Grid.Column="0" Source="Images/icon.png" HorizontalAlignment="Left" Margin="5,3" RenderOptions.BitmapScalingMode="Fant"/>
 
 			<TextBlock Text="Smart Home Management"
 					   Foreground="LightGray"

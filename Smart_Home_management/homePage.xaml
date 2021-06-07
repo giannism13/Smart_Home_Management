@@ -14,7 +14,7 @@
 			<ColumnDefinition />
 		</Grid.ColumnDefinitions>
 
-		<Image Grid.Column="2" Source="Images/home.jpg" Stretch="Uniform" Height="475" HorizontalAlignment="Center"/>
+		<Image Grid.Column="2" Source="Images/home.jpg" Stretch="Uniform" Height="475" HorizontalAlignment="Center" RenderOptions.BitmapScalingMode="Fant"/>
 
 		<StackPanel Grid.Column="0" Background="#FF292759">
 			<Button Name="kitchen"

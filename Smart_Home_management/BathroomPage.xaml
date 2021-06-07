@@ -30,7 +30,7 @@
 
 		<Image Source="Images/Bathroom.jpg" Grid.Column="1" Grid.Row="1"
 			   VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20"
-			   Height="320" RenderOptions.BitmapScalingMode="Linear"/>
+			   Height="320" RenderOptions.BitmapScalingMode="Fant"/>
 
 		<StackPanel Grid.Column="0" Grid.Row="1" Background="#FF292759" Panel.ZIndex="-1">
 			<Grid Height="395">
