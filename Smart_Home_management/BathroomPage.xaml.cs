@@ -48,5 +48,12 @@ namespace Smart_Home_management {
 			WashingM.Foreground = new SolidColorBrush(Colors.Black);
 			WmRect.Visibility = Visibility.Hidden;
 		}
+
+		private void HelpButtonAction(object sender, RoutedEventArgs e) {
+			if (HelpBox.Visibility == Visibility.Visible)
+				HelpBox.Visibility = Visibility.Hidden;
+			else
+				HelpBox.Visibility = Visibility.Visible;
+		}
 	}
 }
