@@ -99,6 +99,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Bedroom2Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -124,6 +128,9 @@
     </Compile>
     <Compile Include="Bedroom1Page.xaml.cs">
       <DependentUpon>Bedroom1Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bedroom2Page.xaml.cs">
+      <DependentUpon>Bedroom2Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
