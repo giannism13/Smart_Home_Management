@@ -12,6 +12,7 @@ namespace Smart_Home_management {
 		private readonly Kitchen kitchenPage;
 		private readonly Bedroom1Page bd1Page;
 		private readonly Bedroom2Page bd2Page;
+		private readonly LivingRoomPage lrPage;
 
 		public HomePage() {
 			InitializeComponent();
@@ -19,6 +20,7 @@ namespace Smart_Home_management {
 			kitchenPage = new Kitchen(this);
 			bd1Page = new Bedroom1Page(this);
 			bd2Page = new Bedroom2Page(this);
+			lrPage = new LivingRoomPage(this);
 		}
 
 		private void KitchenButton_MouseEnter(object sender, MouseEventArgs e) {
@@ -89,5 +91,10 @@ namespace Smart_Home_management {
 		private void GotoBedroom2(object sender, RoutedEventArgs e) {
 			NavigationService.Navigate(bd2Page);
 		}
-	}
+
+        private void GotoLivingRoom(object sender, RoutedEventArgs e)
+        {
+			NavigationService.Navigate(lrPage);
+		}
+    }
 }
