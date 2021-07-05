@@ -36,7 +36,6 @@ namespace Smart_Home_management {
 			LivingRoomBorder.Visibility = Visibility.Hidden;
 		}
 
-
 		private void Bedroom1Button_MouseEnter(object sender, MouseEventArgs e) {
 			bedroom1.Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#FF4C70");
 			Bedroom1Border.Visibility = Visibility.Visible;
