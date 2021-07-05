@@ -22,7 +22,8 @@
 						Foreground="White" Background="#FE6584"
 						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,100,0.4,0" 
-						MouseEnter="KitchenButton_MouseEnter" MouseLeave="KitchenButton_MouseLeave">
+						MouseEnter="KitchenButton_MouseEnter" MouseLeave="KitchenButton_MouseLeave"
+						Click="GotoKitchen">
 
 				<Button.Template>
 					<ControlTemplate TargetType="{x:Type Button}">
