@@ -41,7 +41,7 @@
 						Foreground="White" Background="#FE6584"
 						FontSize="14" FontWeight="Medium"
 						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,0,0.4,0" 
-						MouseEnter="LivingRoomButton_MouseEnter" MouseLeave="LivingRoomButton_MouseLeave">
+						MouseEnter="LivingRoomButton_MouseEnter" MouseLeave="LivingRoomButton_MouseLeave" Click="GotoLivingRoom">
 
 				<Button.Template>
 					<ControlTemplate TargetType="{x:Type Button}">
