@@ -111,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="LivingRoomPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +141,9 @@
     </Compile>
     <Compile Include="KitchenPage.xaml.cs">
       <DependentUpon>KitchenPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LivingRoomPage.xaml.cs">
+      <DependentUpon>LivingRoomPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -204,6 +211,9 @@
   <ItemGroup>
     <Resource Include="Images\bedroom1.jpg" />
     <Resource Include="Images\bedroom2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LivingRoom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />
