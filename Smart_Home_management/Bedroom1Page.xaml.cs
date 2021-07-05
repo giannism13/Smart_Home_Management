@@ -55,7 +55,7 @@ namespace Smart_Home_management {
 		}
 
 		private void TVoff(object sender, RoutedEventArgs e) {
-			Bedlight2.Foreground = new SolidColorBrush(Colors.Black);
+			TV.Foreground = new SolidColorBrush(Colors.Black);
 			TvRect.Visibility = Visibility.Hidden;
 		}
 
