@@ -10,11 +10,13 @@ namespace Smart_Home_management {
 	public partial class HomePage : Page {
 		private readonly BathroomPage brpage;
 		private readonly Kitchen kitchenPage;
+		private readonly Bedroom1Page bd1Page;
 
 		public HomePage() {
 			InitializeComponent();
 			brpage = new BathroomPage(this);
 			kitchenPage = new Kitchen(this);
+			bd1Page = new Bedroom1Page(this);
 		}
 
 		private void KitchenButton_MouseEnter(object sender, MouseEventArgs e) {
@@ -76,6 +78,10 @@ namespace Smart_Home_management {
 
 		private void GotoKitchen(object sender, RoutedEventArgs e) {
 			NavigationService.Navigate(kitchenPage);
+		}
+
+		private void GotoBedroom1(object sender, RoutedEventArgs e) {
+			NavigationService.Navigate(bd1Page);
 		}
 	}
 }
