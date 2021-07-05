@@ -86,6 +86,7 @@
 				</TextBox>
 
 				<Button Name="loginbutton"
+                        IsDefault="True"
 						Content="Login" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
 						FontSize="14" FontWeight="Medium"
