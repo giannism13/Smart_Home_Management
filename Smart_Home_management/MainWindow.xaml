@@ -19,40 +19,29 @@
 			  Panel.ZIndex="2">
 
 			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="200"/>
 				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
+				<ColumnDefinition Width="61"/>
 			</Grid.ColumnDefinitions>
 
-			<Image Grid.Column="0" Source="Images/icon.png" HorizontalAlignment="Left" Margin="5,3"/>
+			<Image Grid.Column="0" Source="Images/icon.png" HorizontalAlignment="Left" Margin="5,3" RenderOptions.BitmapScalingMode="Fant"/>
 
 			<TextBlock Text="Smart Home Management"
 					   Foreground="LightGray"
 					   Grid.Column="0"
-					   Grid.ColumnSpan="3"
 					   VerticalAlignment="Center"
-					   HorizontalAlignment="Center"
+					   HorizontalAlignment="Left"
+					   Margin="30,0"
 					   FontWeight="Medium"/>
 
 			<Ellipse Name="closeButton" 
-					 Fill="#FC6586" Grid.Column="13"
+					 Fill="#FC6586" Grid.Column="2"
 					 Height="14" Width="14" 
 					 HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,4.8"
 					 MouseDown="CloseApp" MouseEnter="CloseButtonHover" MouseLeave="CloseButtonUnhover"/>
 
 			<Ellipse Name="minimizeButton"
-					 Fill="#3DDDC2" Grid.Column="13"
+					 Fill="#3DDDC2" Grid.Column="2"
 					 Height="14" Width="14" 
 					 HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,5,0,4.8"
 					 MouseDown="MinimizeApp" MouseEnter="MinimizeButtonHover" MouseLeave="MinimizeButtonUnhover"/>

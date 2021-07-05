@@ -4,7 +4,6 @@
 	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-	  xmlns:local="clr-namespace:Smart_Home_management"
 	  mc:Ignorable="d" 
 	  d:DesignHeight="475" d:DesignWidth="900"
 	  Title="BathroomPage"
@@ -14,6 +13,7 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="150"/>
 			<ColumnDefinition/>
+			<ColumnDefinition Width="50"/>
 		</Grid.ColumnDefinitions>
 
 		<Grid.RowDefinitions>
@@ -21,7 +21,7 @@
 			<RowDefinition/>
 		</Grid.RowDefinitions>
 
-		<StackPanel Grid.Row="0" Grid.ColumnSpan="2" Background="#0F0F2D"  Orientation="Horizontal">
+		<StackPanel Grid.Row="0" Grid.ColumnSpan="3" Background="#0F0F2D"  Orientation="Horizontal">
 			<Button Background="{x:Null}" BorderBrush="{x:Null}" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BackButtonAction">
 				<materialDesign:PackIcon Kind="ArrowBack" Height="25" Width="25"  Foreground="White" Cursor="Hand"/>
 			</Button>
@@ -29,9 +29,14 @@
 					   Text="Bathroom" Foreground="White" FontSize="20" FontWeight="Bold" Margin="350,6,0,4" Height="30"/>
 		</StackPanel>
 
+		<Button Background="{x:Null}" BorderBrush="{x:Null}" Height="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="HelpButtonAction"
+				 Grid.Column="2" HorizontalAlignment="Right">
+			<materialDesign:PackIcon Kind="Help" Height="25" Width="22"  Foreground="White" Cursor="Hand"/>
+		</Button>
+
 		<Image Source="Images/Bathroom.jpg" Grid.Column="1" Grid.Row="1"
-			   VerticalAlignment="Top" HorizontalAlignment="Center"
-			   Height="320" RenderOptions.BitmapScalingMode="Linear"/>
+			   VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20"
+			   Height="320" RenderOptions.BitmapScalingMode="Fant"/>
 
 		<StackPanel Grid.Column="0" Grid.Row="1" Background="#FF292759" Panel.ZIndex="-1">
 			<Grid Height="395">
@@ -45,22 +50,33 @@
 					<ColumnDefinition/>
 				</Grid.ColumnDefinitions>
 
-				<ToggleButton Grid.Row="0" Checked="LightOn" Unchecked="LightOff" Margin="16.8,92,16.4,79.6" Grid.Column="1"/>
+				<ToggleButton Grid.Row="0" Checked="LightOn" Unchecked="LightOff" Margin="16.8,92,16.4,79.6" Grid.Column="1" Cursor="Hand"/>
 				<materialDesign:PackIcon Name="Light" Kind="CeilingLamp" Height="60" Width="60"
 										 VerticalAlignment="Center" HorizontalAlignment="Center"/>
 				<TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Light" Foreground="White" VerticalAlignment="Bottom" 
 						   HorizontalAlignment="Center" FontSize="15" Margin="0,0,0,40"/>
 
-				<ToggleButton Grid.Row="1" Grid.Column="1" Checked="WmOn" Unchecked="WmOff" Margin="16.8,92,16.4,79.6"/>
+				<ToggleButton Grid.Row="1" Grid.Column="1" Checked="WmOn" Unchecked="WmOff" Margin="16.8,92,16.4,79.6" Cursor="Hand"/>
 				<materialDesign:PackIcon Name="WashingM" Kind="WashingMachine" Height="60" Width="60" Grid.Row="1"
 										 VerticalAlignment="Center" HorizontalAlignment="Center"/>
 				<TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Washing Machine" Foreground="White" VerticalAlignment="Bottom" 
 						   HorizontalAlignment="Center" FontSize="15" Margin="0,0,0,40"/>
 			</Grid>
 		</StackPanel>
-		<Rectangle Name="WmRect" Margin="380,19,297.4,350.2" Grid.Column="1" Grid.Row="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
 
-		<Rectangle Name="LightRect" Margin="275,19,275.4,137.2" Grid.Row="1" Grid.Column="1" Opacity="0.865" Visibility="Hidden">
+		<Grid Name="HelpBox" Margin="316.6,10,22,291.2" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  Panel.ZIndex="1" Visibility="Hidden">
+			<Rectangle Fill="#E5030D20" RadiusY="20" RadiusX="20" Stroke="#FF0A081B" StrokeThickness="2" Visibility="Visible"/>
+			<TextBlock Text="-You can turn on or off any of the available appliances using the switches on the left.
+					   &#x0a;-Appliances that are turned on are indicated on the room's top view
+					   &#x0a;-At any point, you may go back to the main home screen by clicking the back (&lt;-) button
+					   &#x0a;&#x0a;-To close this window click again on the help (?) button"
+					   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" TextWrapping="Wrap"
+					   Width="350" Margin="0, 10" FontSize="13"/>
+		</Grid>
+
+		<Rectangle Name="WmRect" Margin="353.6,38,274.4,329.2" Grid.Column="1" Grid.Row="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
+
+		<Rectangle Name="LightRect" Margin="250.6,34,248.4,115.2" Grid.Row="1" Grid.Column="1" Opacity="0.865" Visibility="Hidden">
 			<Rectangle.Fill>
 				<RadialGradientBrush Opacity="0.595">
 					<GradientStop Color="LightYellow" Offset="0"/>

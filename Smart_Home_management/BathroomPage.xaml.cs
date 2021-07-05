@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Smart_Home_management {
 	/// <summary>
@@ -47,6 +37,13 @@ namespace Smart_Home_management {
 		private void WmOff(object sender, RoutedEventArgs e) {
 			WashingM.Foreground = new SolidColorBrush(Colors.Black);
 			WmRect.Visibility = Visibility.Hidden;
+		}
+
+		private void HelpButtonAction(object sender, RoutedEventArgs e) {
+			if (HelpBox.Visibility == Visibility.Visible)
+				HelpBox.Visibility = Visibility.Hidden;
+			else
+				HelpBox.Visibility = Visibility.Visible;
 		}
 	}
 }
