@@ -13,6 +13,7 @@ namespace Smart_Home_management {
 		private readonly Bedroom1Page bd1Page;
 		private readonly Bedroom2Page bd2Page;
 		private readonly LivingRoomPage lrPage;
+		//public event System.EventHandler LoadComplete;
 
 		public HomePage() {
 			InitializeComponent();
@@ -92,9 +93,8 @@ namespace Smart_Home_management {
 			NavigationService.Navigate(bd2Page);
 		}
 
-        private void GotoLivingRoom(object sender, RoutedEventArgs e)
-        {
+		private void GotoLivingRoom(object sender, RoutedEventArgs e) {
 			NavigationService.Navigate(lrPage);
 		}
-    }
+	}
 }

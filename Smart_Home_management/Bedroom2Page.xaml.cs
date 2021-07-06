@@ -22,21 +22,25 @@ namespace Smart_Home_management {
 		private void LightOn(object sender, RoutedEventArgs e) {
 			Light.Foreground = new SolidColorBrush(Colors.LightGreen);
 			LightRect.Visibility = Visibility.Visible;
+			home.bd2Light.Visibility = Visibility.Visible;
 		}
 
 		private void LightOff(object sender, RoutedEventArgs e) {
 			Light.Foreground = new SolidColorBrush(Colors.Black);
 			LightRect.Visibility = Visibility.Hidden;
+			home.bd2Light.Visibility = Visibility.Hidden;
 		}
 
 		private void TVon(object sender, RoutedEventArgs e) {
 			TV.Foreground = new SolidColorBrush(Colors.LightGreen);
 			TvRect.Visibility = Visibility.Visible;
+			home.bd2Tv.Visibility = Visibility.Visible;
 		}
 
 		private void TVoff(object sender, RoutedEventArgs e) {
 			TV.Foreground = new SolidColorBrush(Colors.Black);
 			TvRect.Visibility = Visibility.Hidden;
+			home.bd2Tv.Visibility = Visibility.Visible;
 		}
 
 		private void HelpButtonAction(object sender, RoutedEventArgs e) {

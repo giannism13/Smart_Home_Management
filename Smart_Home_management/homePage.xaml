@@ -129,5 +129,112 @@
 		<Border Name="BathroomBorder"  BorderBrush="#383660" BorderThickness="3" Grid.Column="1"
 				HorizontalAlignment="Left" Height="164" Margin="311,301,0,0" VerticalAlignment="Top" Width="106"
 				CornerRadius="10" Visibility="Hidden"/>
+
+
+		<Rectangle Name="kitchenLight" Grid.Column="1" Margin="124,13,438.4,241" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+			<Rectangle.Fill>
+				<RadialGradientBrush Opacity="0.595">
+					<GradientStop Color="LightYellow" Offset="0"/>
+					<GradientStop Color="#43EEFF2A" Offset="0.582"/>
+				</RadialGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+
+		<Rectangle Name="kitchenRefrig" Margin="265,24,439.4,383" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
+		<Rectangle Name="kitchenCoffee" Margin="242,55,490.4,406" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
+		<Rectangle Name="kitchenOven" Margin="149,116,577.4,322" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
+
+
+		<Rectangle Name="lrLight" Grid.Column="1" Margin="321,13,121.4,241" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+			<Rectangle.Fill>
+				<RadialGradientBrush Opacity="0.595">
+					<GradientStop Color="LightYellow" Offset="0"/>
+					<GradientStop Color="#43EEFF2A" Offset="0.582"/>
+				</RadialGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+
+		<Rectangle Name="lrTv" Margin="397,225,281.4,241" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
+
+		<Ellipse Name="lrLamp" Margin="558,38,145.4,391" Grid.Column="1" Visibility="Hidden">
+			<Ellipse.Fill>
+				<RadialGradientBrush>
+					<GradientStop Color="#33FEFF0A" Offset="0.375"/>
+					<GradientStop Color="#CCFFFFFF" Offset="0.141"/>
+				</RadialGradientBrush>
+			</Ellipse.Fill>
+		</Ellipse>
+
+
+		<Rectangle Name="bd1Light" Grid.Column="1" Margin="124,239,444.4,16" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+			<Rectangle.Fill>
+				<RadialGradientBrush Opacity="0.595">
+					<GradientStop Color="LightYellow" Offset="0"/>
+					<GradientStop Color="#43EEFF2A" Offset="0.582"/>
+				</RadialGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+
+		<Ellipse Name="bd1Bl1" Margin="124,409,598.4,37" Grid.Column="1" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+			<Ellipse.Fill>
+				<RadialGradientBrush>
+					<GradientStop Color="#33FEFF0A" Offset="0.375"/>
+					<GradientStop Color="#CCFFFFFF" Offset="0.044"/>
+				</RadialGradientBrush>
+			</Ellipse.Fill>
+		</Ellipse>
+
+		<Ellipse Name="bd1Bl2" Margin="127,303,595.4,146" Grid.Column="1" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+			<Ellipse.Fill>
+				<RadialGradientBrush>
+					<GradientStop Color="#33FEFF0A" Offset="0.375"/>
+					<GradientStop Color="#CCFFFFFF" Offset="0.044"/>
+				</RadialGradientBrush>
+			</Ellipse.Fill>
+		</Ellipse>
+
+		<Rectangle Name="bd1Tv" Margin="269,377,463.4,39" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+			<Rectangle.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="7.448"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Rectangle.RenderTransform>
+		</Rectangle>
+
+
+		<Rectangle Name="bd2Light" Grid.Column="1" Margin="422,239,121.4,16" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+			<Rectangle.Fill>
+				<RadialGradientBrush Opacity="0.595">
+					<GradientStop Color="LightYellow" Offset="0"/>
+					<GradientStop Color="#43EEFF2A" Offset="0.582"/>
+				</RadialGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+
+		<Rectangle Name="bd2Tv" Margin="566,389,161.4,27" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+			<Rectangle.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="7.448"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Rectangle.RenderTransform>
+		</Rectangle>
+
+
+		<Rectangle Name="bathLight" Grid.Column="1" Margin="306,308,328.4,16" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+			<Rectangle.Fill>
+				<RadialGradientBrush Opacity="0.595">
+					<GradientStop Color="LightYellow" Offset="0"/>
+					<GradientStop Color="#43EEFF2A" Offset="0.582"/>
+				</RadialGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+
+		<Rectangle Name="bathWm" Margin="366,308,343.4,128" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
 	</Grid>
 </Page>
