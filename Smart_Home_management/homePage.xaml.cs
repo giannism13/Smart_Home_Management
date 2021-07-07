@@ -96,5 +96,9 @@ namespace Smart_Home_management {
 		private void GotoLivingRoom(object sender, RoutedEventArgs e) {
 			NavigationService.Navigate(lrPage);
 		}
-	}
+
+        private void exitButton(object sender, RoutedEventArgs e) {
+			//TODO
+        }
+    }
 }
