@@ -21,7 +21,7 @@
 						Content="Kitchen" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
 						FontSize="14" FontWeight="Medium"
-						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,100,0.4,0" 
+						RenderTransformOrigin="0.501,1.835" Height="55" Margin="0,50,0.4,0" 
 						MouseEnter="KitchenButton_MouseEnter" MouseLeave="KitchenButton_MouseLeave"
 						Click="GotoKitchen">
 
@@ -110,23 +110,23 @@
 				</Button.Template>
 			</Button>
 
-            <Button Name="Exit"
+			<Button Name="Exit"
 						Content="Exit" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
 						FontSize="14" FontWeight="Medium"
-						Height="55" Margin="0,35,0.4,0" Click="exitButton">
+						Height="55" Margin="0,80,0.4,0" Click="exitButton">
 
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="100" Height="25"
+				<Button.Template>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Border Width="100" Height="25"
 									CornerRadius="12"
 									Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-        </StackPanel>
+							<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+						</Border>
+					</ControlTemplate>
+				</Button.Template>
+			</Button>
+		</StackPanel>
 		<Border Name="LivingRoomBorder"  BorderBrush="#383660" BorderThickness="3" Grid.Column="1"
 				HorizontalAlignment="Left" Height="223" Margin="316,10,0,0" VerticalAlignment="Top" Width="313"
 				CornerRadius="10" Visibility="Hidden"/>
