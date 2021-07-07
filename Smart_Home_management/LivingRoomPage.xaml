@@ -206,9 +206,9 @@
 
         <!--Floor lamp-->
         <Ellipse Name="FloorLampRect"
-                 Margin="532,92,111,289"
+                 Margin="532,90,111,288"
                  Grid.Column="1" Grid.Row="1"
-                 Visibility="Hidden">
+                 Visibility="Visible">
             <Ellipse.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#26D5D60C" Offset="0.375"/>
