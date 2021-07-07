@@ -53,7 +53,7 @@ namespace Smart_Home_management {
 				errorText.Text = "Username and password fields cannot be empty!";
 			else if (usernameField.Text == "user" && passwordField.Text == "123") {
 				MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
-				objMainWindows.Main.Navigate(new HomePage());
+				objMainWindows.Main.Navigate(new HomePage(this));
 			}
 			else
 				errorText.Text = "Wrong username or password!";

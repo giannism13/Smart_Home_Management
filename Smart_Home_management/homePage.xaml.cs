@@ -13,15 +13,17 @@ namespace Smart_Home_management {
 		private readonly Bedroom1Page bd1Page;
 		private readonly Bedroom2Page bd2Page;
 		private readonly LivingRoomPage lrPage;
+		private LoginPage lp;
 		//public event System.EventHandler LoadComplete;
 
-		public HomePage() {
+		public HomePage(LoginPage _lp) {
 			InitializeComponent();
 			brpage = new BathroomPage(this);
 			kitchenPage = new Kitchen(this);
 			bd1Page = new Bedroom1Page(this);
 			bd2Page = new Bedroom2Page(this);
 			lrPage = new LivingRoomPage(this);
+			lp = _lp;
 		}
 
 		private void KitchenButton_MouseEnter(object sender, MouseEventArgs e) {
@@ -78,27 +80,29 @@ namespace Smart_Home_management {
 		}
 
 		private void GotoBathroom(object sender, RoutedEventArgs e) {
-			NavigationService.Navigate(brpage);
+			_ = NavigationService.Navigate(brpage);
 		}
 
 		private void GotoKitchen(object sender, RoutedEventArgs e) {
-			NavigationService.Navigate(kitchenPage);
+			_ = NavigationService.Navigate(kitchenPage);
 		}
 
 		private void GotoBedroom1(object sender, RoutedEventArgs e) {
-			NavigationService.Navigate(bd1Page);
+			_ = NavigationService.Navigate(bd1Page);
 		}
 
 		private void GotoBedroom2(object sender, RoutedEventArgs e) {
-			NavigationService.Navigate(bd2Page);
+			_ = NavigationService.Navigate(bd2Page);
 		}
 
 		private void GotoLivingRoom(object sender, RoutedEventArgs e) {
-			NavigationService.Navigate(lrPage);
+			_ = NavigationService.Navigate(lrPage);
 		}
 
         private void exitButton(object sender, RoutedEventArgs e) {
-			//TODO
+			lp.DataContext = null;
+			lp = new LoginPage();
+			_ = NavigationService.Navigate(lp);
         }
-    }
+	}
 }
