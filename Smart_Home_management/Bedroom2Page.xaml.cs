@@ -40,7 +40,7 @@ namespace Smart_Home_management {
 		private void TVoff(object sender, RoutedEventArgs e) {
 			TV.Foreground = new SolidColorBrush(Colors.Black);
 			TvRect.Visibility = Visibility.Hidden;
-			home.bd2Tv.Visibility = Visibility.Visible;
+			home.bd2Tv.Visibility = Visibility.Hidden;
 		}
 
 		private void HelpButtonAction(object sender, RoutedEventArgs e) {
