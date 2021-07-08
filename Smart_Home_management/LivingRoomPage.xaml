@@ -75,7 +75,7 @@
                                      Grid.Row="0" Grid.Column="0"
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"
-                                     Width="40" Height="40" 
+                                     Height="60" Width="60" 
                                      Kind="CeilingLight"/>
 
             <ToggleButton Grid.Row="0" Grid.Column="1"
@@ -101,7 +101,7 @@
                                      Grid.Row="1" Grid.Column="0"
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"
-                                     Width="40" Height="40" 
+                                     Height="60" Width="60" 
                                      Kind="TV"/>
 
             <ToggleButton Grid.Row="1" Grid.Column="1"
@@ -127,7 +127,7 @@
                                      Grid.Row="2" Grid.Column="0"
                                      VerticalAlignment="Center"
                                      HorizontalAlignment="Center"
-                                     Width="40" Height="40" 
+                                     Height="60" Width="60" 
                                      Kind="FloorLamp"/>
 
             <ToggleButton Grid.Row="2" Grid.Column="1"
