@@ -111,8 +111,8 @@
 			</Button>
 
 			<Button Name="Exit"
-						Content="Exit" Cursor="Hand"
-						Foreground="White" Background="#FE6584"
+						Content="Log Out" Cursor="Hand"
+						Foreground="White" Background="Red"
 						FontSize="14" FontWeight="Medium"
 						Height="55" Margin="0,80,0.4,0" Click="exitButton">
 
