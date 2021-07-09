@@ -100,9 +100,22 @@ namespace Smart_Home_management {
 		}
 
         private void exitButton(object sender, RoutedEventArgs e) {
-			lp.DataContext = null;
-			lp = new LoginPage();
-			_ = NavigationService.Navigate(lp);
-        }
+			//MessageBoxButton buttons = MessageBoxButton.YesNo;
+			//MessageBoxImage icon = MessageBoxImage.Question;
+			//MessageBoxResult messageBoxResult = MessageBox.Show("Are you sure?", "Confirmation", buttons, icon);
+			//if (messageBoxResult == MessageBoxResult.Yes){
+			//	lp.DataContext = null;
+			//	lp = new LoginPage();
+			//	_ = NavigationService.Navigate(lp);
+			//}
+
+			bool? Result = new MessageBoxCustom("Are you sure, You want to close application ? ", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
+			if (Result.Value)
+			{
+				lp.DataContext = null;
+				lp = new LoginPage();
+				_ = NavigationService.Navigate(lp);
+			}
+		}
 	}
 }
