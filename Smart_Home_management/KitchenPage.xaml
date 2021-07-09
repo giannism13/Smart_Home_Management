@@ -206,7 +206,7 @@
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
                        Height="110" Width="74"
-                       Margin="410,46,0,0"
+                       Margin="463,46,0,0"
                        StrokeThickness="2" Stroke="#FFA2FF00"
                        RadiusY="5" RadiusX="5"
                        Fill="#19A2FF00"
@@ -217,7 +217,7 @@
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
                        Height="18" Width="21"
-                       Margin="374,99,0,0"
+                       Margin="427,99,0,0"
                        StrokeThickness="2" Stroke="#FFA2FF00"
                        RadiusY="5" RadiusX="5"
                        Fill="#19A2FF00"
@@ -228,7 +228,7 @@
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top"
                        Height="45" Width="33"
-                       Margin="215,208,0,0"
+                       Margin="268,208,0,0"
                        StrokeThickness="2" Stroke="#FFA2FF00"
                        RadiusY="5" RadiusX="5"
                        Fill="#19A2FF00"
@@ -236,7 +236,7 @@
 
 			<!--light bulb-->
 			<Rectangle Name ="LightRect"
-                       Margin="167,25,108,25"
+                       Margin="221,25,162,25"
                        RadiusY="5" RadiusX="5"
                        Opacity="0.865"
                        Visibility="Hidden">
