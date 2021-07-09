@@ -109,7 +109,7 @@ namespace Smart_Home_management {
 			//	_ = NavigationService.Navigate(lp);
 			//}
 
-			bool? Result = new MessageBoxCustom("Are you sure, You want to close application ? ", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
+			bool? Result = new MessageBoxCustom("Are you sure υou want to Log Out?", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
 			if (Result.Value)
 			{
 				lp.DataContext = null;
