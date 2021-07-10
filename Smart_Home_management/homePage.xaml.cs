@@ -14,7 +14,6 @@ namespace Smart_Home_management {
 		private readonly Bedroom2Page bd2Page;
 		private readonly LivingRoomPage lrPage;
 		private LoginPage lp;
-		//public event System.EventHandler LoadComplete;
 
 		public HomePage(LoginPage _lp) {
 			InitializeComponent();
@@ -99,7 +98,7 @@ namespace Smart_Home_management {
 			_ = NavigationService.Navigate(lrPage);
 		}
 
-        private void exitButton(object sender, RoutedEventArgs e) {
+		private void exitButton(object sender, RoutedEventArgs e) {
 			//MessageBoxButton buttons = MessageBoxButton.YesNo;
 			//MessageBoxImage icon = MessageBoxImage.Question;
 			//MessageBoxResult messageBoxResult = MessageBox.Show("Are you sure?", "Confirmation", buttons, icon);
@@ -109,13 +108,42 @@ namespace Smart_Home_management {
 			//	_ = NavigationService.Navigate(lp);
 			//}
 
-			bool? Result = new MessageBoxCustom("Are you sure you want to Log Out?", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
-			if (Result.Value)
-			{
-				lp.DataContext = null;
-				lp = new LoginPage();
-				_ = NavigationService.Navigate(lp);
-			}
+			//bool? Result = new MessageBoxCustom("Are you sure you want to Log Out?", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
+			//if (Result.Value)
+			//{
+			//	lp.DataContext = null;
+			//	lp = new LoginPage();
+			//	_ = NavigationService.Navigate(lp);
+			//}
+			exitConfirm.Visibility = Visibility.Visible;
+			BlockContent.Visibility = Visibility.Visible;
+		}
+
+		private void Yes_MouseEnter(object sender, MouseEventArgs e) {
+			confirmYes.Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#FF4C70");
+		}
+
+		private void Yes_MouseLeave(object sender, MouseEventArgs e) {
+			confirmYes.Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#FE6584");
+		}
+
+		private void confirmClose(object sender, RoutedEventArgs e) {
+			lp.DataContext = null;
+			lp = new LoginPage();
+			_ = NavigationService.Navigate(lp);
+		}
+
+		private void No_MouseEnter(object sender, MouseEventArgs e) {
+			confirmNo.Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#282745");
+		}
+
+		private void No_MouseLeave(object sender, MouseEventArgs e) {
+			confirmNo.Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#383660");
+		}
+
+		private void noClose(object sender, RoutedEventArgs e) {
+			exitConfirm.Visibility = Visibility.Hidden;
+			BlockContent.Visibility = Visibility.Hidden;
 		}
 	}
 }

@@ -202,7 +202,6 @@
     <None Include="Properties\app.manifest" />
     <None Include="Smart_Home_management_TemporaryKey.pfx" />
     <Resource Include="Fonts\Dosis.ttf" />
-    <None Include="certificate.snk" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

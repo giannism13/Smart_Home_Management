@@ -49,5 +49,63 @@
 		<Frame x:Name="Main" Margin="0,25,0,0" NavigationUIVisibility="Hidden">
 
 		</Frame>
+
+		<Rectangle Name="BlockContent" Width="900" Margin="0,25,0,0" Visibility="Hidden" Panel.ZIndex="2">
+			<Rectangle.Fill>
+				<SolidColorBrush Color="Black" Opacity="0.8"/>
+			</Rectangle.Fill>
+		</Rectangle>
+
+		<Grid Name="exitConfirm" Height="150" Width="300" Panel.ZIndex="3"
+			  HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
+			<Rectangle StrokeThickness="2" Stroke="Black" RadiusY="20" RadiusX="20">
+				<Rectangle.Fill>
+					<SolidColorBrush Color="#FF0B0B23"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<TextBlock Text="Are you that you want to quit?"
+					   FontSize="16" Foreground="White"
+					   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50"/>
+
+			<Button Name="confirmYes"
+						IsDefault="True"
+						Content="Yes" Cursor="Hand"
+						VerticalAlignment="Bottom" HorizontalAlignment="Left"
+						Foreground="White" Background="#FE6584"
+						FontSize="14" FontWeight="Medium"
+						Margin="50,0,0,20" 
+						Click="confirmClose" MouseEnter="Yes_MouseEnter" MouseLeave="Yes_MouseLeave">
+
+				<Button.Template>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Border Width="80" Height="25"
+									CornerRadius="12"
+									Background="{TemplateBinding Background}">
+							<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+						</Border>
+					</ControlTemplate>
+				</Button.Template>
+			</Button>
+
+			<Button Name="confirmNo"
+						IsDefault="False"
+						Content="No" Cursor="Hand"
+						VerticalAlignment="Bottom" HorizontalAlignment="Right"
+						Foreground="White" Background="#383660"
+						FontSize="14" FontWeight="Medium"
+						Margin="0,0,50,20" 
+						Click="noClose" MouseEnter="No_MouseEnter" MouseLeave="No_MouseLeave">
+
+				<Button.Template>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Border Width="80" Height="25"
+									CornerRadius="12"
+									Background="{TemplateBinding Background}">
+							<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+						</Border>
+					</ControlTemplate>
+				</Button.Template>
+			</Button>
+		</Grid>
 	</Grid>
 </Window>
