@@ -64,7 +64,8 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Smart_Home_management_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>558E3CF87227AFE133371D0622566016E52B3B92</ManifestCertificateThumbprint>
@@ -329,7 +330,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\app.manifest" />
-    <None Include="Smart_Home_management_TemporaryKey.pfx" />
     <Resource Include="Fonts\Dosis.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
