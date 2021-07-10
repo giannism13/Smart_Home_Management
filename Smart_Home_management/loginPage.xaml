@@ -63,7 +63,7 @@
 					</TextBox.Template>
 				</TextBox>
 
-				<!--<TextBox
+				<TextBox
 					Name="passwordField"
 					Text=" Password "
 					Foreground="#FFA08787"
@@ -83,19 +83,7 @@
 							</Border>
 						</ControlTemplate>
 					</TextBox.Template>
-				</TextBox>-->
-				<PasswordBox
-					Name="passwordField"
-					Foreground="#FFA08787"
-					HorizontalAlignment="Center" 
-					VerticalAlignment="Center" 
-					FontSize="16" Cursor="IBeam"
-					Margin="5"
-					Width="200" Height="25"
-					Background="White">
-
-					
-				</PasswordBox>
+				</TextBox>
 
 				<Button Name="loginbutton"
 						IsDefault="True"
