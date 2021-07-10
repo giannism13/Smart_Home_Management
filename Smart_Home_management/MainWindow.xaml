@@ -63,7 +63,7 @@
 					<SolidColorBrush Color="#FF0B0B23"/>
 				</Rectangle.Fill>
 			</Rectangle>
-			<TextBlock Text="Are you that you want to quit?"
+			<TextBlock Text="Are you sure that you want to quit?"
 					   FontSize="16" Foreground="White"
 					   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50"/>
 
