@@ -28,7 +28,7 @@ namespace Smart_Home_management {
 		private void LightOff(object sender, RoutedEventArgs e) {
 			Light.Foreground = new SolidColorBrush(Colors.Black);
 			LightRect.Visibility = Visibility.Hidden;
-			home.kitchenLight.Visibility = Visibility.Hidden;
+			home.bathLight.Visibility = Visibility.Hidden;
 		}
 
 		private void WmOn(object sender, RoutedEventArgs e) {

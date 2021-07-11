@@ -252,7 +252,10 @@
 			</Rectangle.Fill>
 		</Rectangle>
 
-		<Rectangle Name="bathWm" Margin="366,308,343.4,128" Grid.Column="1" StrokeThickness="2" Stroke="#FFA2FF00" RadiusY="5" RadiusX="5" Fill="#19A2FF00" Visibility="Hidden"/>
+		<Rectangle Name="bathWm" Margin="366,308,343.4,128"
+				   Grid.Column="1" StrokeThickness="2"
+				   Stroke="#FFA2FF00" RadiusY="5" RadiusX="5"
+				   Fill="#19A2FF00" Visibility="Hidden"/>
 		
 		<Rectangle Name="BlockContent" Width="900" Visibility="Hidden" Panel.ZIndex="2"
 				   Grid.ColumnSpan="2">
