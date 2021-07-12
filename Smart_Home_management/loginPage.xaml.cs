@@ -21,7 +21,7 @@ namespace Smart_Home_management {
 		}
 
 		private void LoginButton_Click(object sender, RoutedEventArgs e) {
-			if (usernameField.Text == "" || passwordField.Password == "") {
+			if (usernameField.Text == "" || passwordField.Password.ToString() == "") {
 				errorText.Text = "Username and password fields cannot be empty!";
 			}
 			else if (usernameField.Text == "user" && passwordField.Password.ToString() == "123") {
