@@ -10,103 +10,59 @@
 	  Title="loginPage"
 	  FontFamily="Fonts/#Dosis">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="1"
+		<StackPanel Grid.Row="1"
 					VerticalAlignment="Center"
 					Margin="60">
-            <StackPanel Height="243">
-                <StackPanel Orientation="Horizontal"
+			<StackPanel Height="243">
+				<StackPanel Orientation="Horizontal"
 							HorizontalAlignment="Center"
 							Margin="0,0,0,20">
-                    <Image Width="50" Height="50"
+					<Image Width="50" Height="50"
 					   Source="Images/icon.png"
 						   RenderOptions.BitmapScalingMode="Fant"/>
 
-                    <TextBlock Text="Smart Home Management"
+					<TextBlock Text="Smart Home Management"
 						   Foreground="White"
 						   FontSize="20"
 						   FontWeight="Medium"
 						   VerticalAlignment="Center"
 						   Margin="10,0,0,0"/>
-                </StackPanel>
+				</StackPanel>
 
-                <!--<TextBox
-					Name="usernameField"
-					Text=" Username "
-					Foreground="#FFA08787"
-					HorizontalAlignment="Center" 
-					VerticalAlignment="Center" 
-					FontSize="16" Cursor="IBeam"
-					Margin="5"
-					GotFocus="UsernameField_GotFocus"
-					LostFocus="UsernameField_LostFocus">
-
-					<TextBox.Template>
-						<ControlTemplate TargetType="TextBox">
-							<Border Width="200" Height="25"
-									CornerRadius="7"
-									Background="White">
-								<ScrollViewer Margin="0"
-						x:Name="PART_ContentHost" />
-							</Border>
-						</ControlTemplate>
-					</TextBox.Template>
-				</TextBox>-->
-
-                <!--<TextBox
-					Name="passwordField"
-					Text=" Password "
-					Foreground="#FFA08787"
-					HorizontalAlignment="Center" 
-					VerticalAlignment="Center" 
-					FontSize="16" Cursor="IBeam"
-					Margin="5"
-					GotFocus="PasswordField_GotFocus" LostFocus="PasswordField_LostFocus">
-
-					<TextBox.Template>
-						<ControlTemplate TargetType="TextBox">
-							<Border Width="200" Height="25"
-									CornerRadius="7"
-									Background="White">
-								<ScrollViewer Margin="0"
-						x:Name="PART_ContentHost" />
-							</Border>
-						</ControlTemplate>
-					</TextBox.Template>
-				</TextBox>-->
-                <StackPanel HorizontalAlignment="Center" 
-                            VerticalAlignment="Center"
-                            Orientation ="Vertical"
-                            Margin="29,0,26,0" Width="225">
-                    <TextBox
-                        Name="usernameField"
-                        Margin="0,10"
-                        Width="170"
+				<StackPanel HorizontalAlignment="Center" 
+							VerticalAlignment="Center"
+							Orientation ="Vertical"
+							Margin="29,0,26,0" Width="225">
+					<TextBox
+						Name="usernameField"
+						Margin="0,10"
+						Width="170"
 						Foreground="White" CaretBrush="White"
 						materialDesign:HintAssist.Hint="Username"
 						Style="{StaticResource MaterialDesignTextBox}"
 						materialDesign:TextFieldAssist.UnderlineBrush="Black" FontSize="16"
-                    />
+					/>
 
-                    <PasswordBox Name = "passwordField"
-                                 Margin="0,10"
-                                 Width="170"
+					<PasswordBox Name = "passwordField"
+								 Margin="0,10"
+								 Width="170"
 								 materialDesign:HintAssist.Hint="Password"
 								 Foreground="White" CaretBrush="White"
 								 Style="{StaticResource MaterialDesignPasswordBox}"
 								 materialDesign:TextFieldAssist.UnderlineBrush="Black" FontSize="16"/>
 
-                    <Button Name="loginbutton"
+					<Button Name="loginbutton"
 						IsDefault="True"
 						Content="Login" Cursor="Hand"
 						Foreground="White" Background="#FE6584"
@@ -114,90 +70,90 @@
 						Height="55" Margin="0,0,0.4,0" 
 						Click="LoginButton_Click" MouseEnter="LoginButton_MouseEnter" MouseLeave="LoginButton_MouseLeave">
 
-                        <Button.Template>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Width="100" Height="25"
+						<Button.Template>
+							<ControlTemplate TargetType="{x:Type Button}">
+								<Border Width="100" Height="25"
 									CornerRadius="12"
 									Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </StackPanel>
+									<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+								</Border>
+							</ControlTemplate>
+						</Button.Template>
+					</Button>
+				</StackPanel>
 
-                <TextBlock Name="errorText"
+				<TextBlock Name="errorText"
 						   FontSize="14" Foreground="#FFFC0505"
 						   VerticalAlignment="center" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </StackPanel>
+			</StackPanel>
+		</StackPanel>
 
-        <Rectangle Height="278"
-                   VerticalAlignment="Bottom"
-                   Margin="50,0,50,91"
-                   RadiusY="10" RadiusX="10" Grid.Row="1"
-                   Panel.ZIndex="-1" Fill="#383660">
-            <Rectangle.Effect>
-                <DropShadowEffect BlurRadius="15"
-                                  Direction="0"
-                                  RenderingBias="Quality"
-                                  ShadowDepth="1"
-                                  Color="Black"/>
-            </Rectangle.Effect>
-        </Rectangle>
+		<Rectangle Height="278"
+				   VerticalAlignment="Bottom"
+				   Margin="50,0,50,91"
+				   RadiusY="10" RadiusX="10" Grid.Row="1"
+				   Panel.ZIndex="-1" Fill="#383660">
+			<Rectangle.Effect>
+				<DropShadowEffect BlurRadius="15"
+								  Direction="0"
+								  RenderingBias="Quality"
+								  ShadowDepth="1"
+								  Color="Black"/>
+			</Rectangle.Effect>
+		</Rectangle>
 
-        <Grid Grid.Column="1"
+		<Grid Grid.Column="1"
 			  Grid.Row="2"
 			  Margin="16, -365, -610, 85"
 			  Panel.ZIndex="-1">
 
-            <Grid.RenderTransform>
-                <RotateTransform Angle="50"/>
-            </Grid.RenderTransform>
+			<Grid.RenderTransform>
+				<RotateTransform Angle="50"/>
+			</Grid.RenderTransform>
 
-            <StackPanel Orientation="Horizontal"
+			<StackPanel Orientation="Horizontal"
 						Margin="-350, 150, -255, -250">
 
-                <StackPanel>
-                    <Border Width="700"
+				<StackPanel>
+					<Border Width="700"
 							Height="35"
 							Background="#3DDDC2"
 							Margin="150, 0, 0, 0"
 							CornerRadius="20"/>
 
-                    <Border Width="700"
+					<Border Width="700"
 							Height="35"
 							Background="#FC6586"
 							Margin="0, 15, 0, 0"
 							CornerRadius="20"/>
 
-                    <Border Width="700"
+					<Border Width="700"
 							Height="35"
 							Background="#383660"
 							Margin="75, 15, 0, 0"
 							CornerRadius="20"/>
-                </StackPanel>
+				</StackPanel>
 
-                <StackPanel>
-                    <Border Width="700"
+				<StackPanel>
+					<Border Width="700"
 							Height="35"
 							Background="#3DDDC2"
 							Margin="150, 0, 0, 0"
 							CornerRadius="20"/>
 
-                    <Border Width="700"
+					<Border Width="700"
 							Height="35"
 							Background="#FC6586"
 							Margin="0, 15, 0, 0"
 							CornerRadius="20"/>
 
-                    <Border Width="700"
+					<Border Width="700"
 							Height="35"
 							Background="#383660"
 							Margin="75, 15, 0, 0"
 							CornerRadius="20"/>
-                </StackPanel>
-            </StackPanel>
-        </Grid>
-    </Grid>
+				</StackPanel>
+			</StackPanel>
+		</Grid>
+	</Grid>
 </Page>

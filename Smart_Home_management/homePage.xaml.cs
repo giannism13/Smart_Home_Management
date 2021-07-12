@@ -99,22 +99,6 @@ namespace Smart_Home_management {
 		}
 
 		private void exitButton(object sender, RoutedEventArgs e) {
-			//MessageBoxButton buttons = MessageBoxButton.YesNo;
-			//MessageBoxImage icon = MessageBoxImage.Question;
-			//MessageBoxResult messageBoxResult = MessageBox.Show("Are you sure?", "Confirmation", buttons, icon);
-			//if (messageBoxResult == MessageBoxResult.Yes){
-			//	lp.DataContext = null;
-			//	lp = new LoginPage();
-			//	_ = NavigationService.Navigate(lp);
-			//}
-
-			//bool? Result = new MessageBoxCustom("Are you sure you want to Log Out?", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
-			//if (Result.Value)
-			//{
-			//	lp.DataContext = null;
-			//	lp = new LoginPage();
-			//	_ = NavigationService.Navigate(lp);
-			//}
 			exitConfirm.Visibility = Visibility.Visible;
 			BlockContent.Visibility = Visibility.Visible;
 		}
@@ -144,6 +128,14 @@ namespace Smart_Home_management {
 		private void noClose(object sender, RoutedEventArgs e) {
 			exitConfirm.Visibility = Visibility.Hidden;
 			BlockContent.Visibility = Visibility.Hidden;
+		}
+
+		private void logOutMouseEnter(object sender, MouseEventArgs e) {
+			Exit.Background = new SolidColorBrush(Colors.DarkRed);
+		}
+
+		private void logOutMouseLeave(object sender, MouseEventArgs e) {
+			Exit.Background = new SolidColorBrush(Colors.Red);
 		}
 	}
 }

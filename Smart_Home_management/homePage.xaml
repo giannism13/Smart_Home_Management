@@ -114,7 +114,7 @@
 						Content="Log Out" Cursor="Hand"
 						Foreground="White" Background="Red"
 						FontSize="14" FontWeight="Medium"
-						Height="55" Margin="0,80,0.4,0" Click="exitButton">
+						Height="55" Margin="0,80,0.4,0" Click="exitButton" MouseEnter="logOutMouseEnter" MouseLeave="logOutMouseLeave">
 
 				<Button.Template>
 					<ControlTemplate TargetType="{x:Type Button}">
